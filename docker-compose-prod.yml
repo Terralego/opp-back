@@ -1,0 +1,14 @@
+version: '3.7'
+x-django: &django
+  volumes:
+  - ./local.py:/code/src/project/settings/local.py
+services:
+  nginx:
+    ports:
+    - 80:80
+  cron:
+    <<: [ *django ]
+  django:
+    <<: [ *django ]
+    ports:
+    - "8000:8000"

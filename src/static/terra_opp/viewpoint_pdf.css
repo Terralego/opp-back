@@ -1,0 +1,80 @@
+@page {
+  margin: 30px
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header img {
+  vertical-align: top;
+}
+
+.header img:first-child {
+  border: solid 1px black;
+}
+
+
+h1 {
+  font-size: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.block {
+  page-break-inside: avoid;
+}
+
+dl, .half-width {
+  float: left;
+  width: 50%;
+}
+
+.adresse {
+  width: 70%;
+}
+
+.props {
+  width: 30%;
+}
+
+dd, dt {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+.props dt {
+  width: 65%;
+}
+
+.props dd {
+  width: 35%;
+  text-align: right;
+}
+
+.adresse dt {
+  width: 25%;
+}
+
+.adresse dd {
+  width: 75%;
+}
+
+dt:after {
+  content: ' :';
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

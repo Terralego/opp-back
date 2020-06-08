@@ -1,0 +1,36 @@
+version: '3.7'
+x-images:
+  bypass: &bypass
+    command: 'sh -c "while true;do echo notstarted;sleep 65000;done"'
+    entrypoint: 'sh -c "while true;do echo notstarted;sleep 65000;done"'
+    restart: "no"
+services:
+  nginx:
+    environment:
+    - NO_SSL=0
+    - NO_STATICS=1
+    ports:
+    - "80:80"
+    - "443:443"
+  backup: {<<: [ *bypass ]}
+  django:
+    environment:
+      - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-project.settings.dev}
+      - NO_MIGRATE=1
+      - NO_COLLECT_STATIC=1
+      - NO_GUNICORN=1
+    volumes:
+      - ./prod/sudoer:/etc/sudoers.d/django
+      - ./prod/init.sh:/code/init/init.sh
+      - ./prod/start.sh:/code/init/start.sh
+      - ./prod/cron.sh:/code/init/cron.sh
+      - ./lib:/code/lib
+      - ./local:/code/local
+      - ./src:/code/src
+      - ./private:/code/private
+      - ./tox.ini:/code/tox.ini
+      - ./.tox:/code/.tox
+      - ./requirements.txt:/code/requirements.txt
+      - ./requirements-dev.txt:/code/requirements-dev.txt
+    ports:
+      - "8000:8000"

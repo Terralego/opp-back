@@ -1,0 +1,73 @@
+{% load i18n opp_tags static l10n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info for LANGUAGE_CODE as lang %}
+<html lang="{{ lang.code }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ viewpoint.label }}</title>
+  <meta name="description" content="{{ viewpoint.label }} pdf">
+  <link href="{% static 'terra_opp/viewpoint_pdf.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <img src="{% static 'logo.png' %}" />
+  <img src="{% static 'bandeau.png' %}" />
+</div>
+
+<h1>Fiche de rephotographie</h1>
+
+{% with lon=viewpoint.point.geom.0|unlocalize lat=viewpoint.point.geom.1|unlocalize first_pic=viewpoint.pictures.earliest %}
+  {% spaceless %}
+  <dl class="adresse">
+    <dt>Commune</dt>
+    <dd>{{ viewpoint.properties.commune }}</dd>
+    <dt>Adresse</dt>
+    <dd>{{ viewpoint.properties.voie }}</dd>
+    <dt>Site</dt>
+    <dd>{{ viewpoint.properties.site }}</dd>
+    <dt>Observations</dt>
+    <dd>{{ viewpoint.properties.rephotographie }}</dd>
+  </dl>
+  <dl class="props">
+    <dt>Latitude</dt>
+    <dd>{{ lat|floatformat:-5 }}</dd>
+    <dt>Longitude</dt>
+    <dd>{{ lon|floatformat:-5 }}</dd>
+    <dt>Altitude</dt>
+    <dd>{{ first_pic.properties.altitude }} m</dd>
+    <dt>Hauteur de l'oeil</dt>
+    <dd>{{ first_pic.properties.hauteur }}</dd>
+    <dt>Azimut</dt>
+    <dd>{{ first_pic.properties.orientation }}°</dd>
+    <dt>Focale 35mm</dt>
+    <dd>{{ first_pic.properties.focale_35mm }}</dd>
+    <dt>Focale objectif</dt>
+    <dd>{{ first_pic.properties.focale_objectif }}</dd>
+  </dl>
+  {% endspaceless %}
+
+  {% for doc in viewpoint.related.all %}
+    {% if doc.key == 'croquis' or doc.key == 'emplacement' %}
+      <div class="half-width">
+        <label>{{ doc.key|capfirst }}</label>
+        <img src="{{ doc.document|as_versatile:'thumbnail__400x800' }}" />
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="clearfix"></div>
+
+  <div class="block">
+    <label>Photo de référence</label>
+    <img src="{{ first_pic.file.thumbnail.750x1500.url }}" class="viewpoint-picture" />
+  </div>
+
+  {% if viewpoint.pictures.count > 1 %}
+    <div class="block">
+      <label>Dernière photographie</label>
+      <img src="{{ viewpoint.pictures.latest.file.thumbnail.750x1500.url }}" class="viewpoint-picture" />
+    </div>
+  {% endif %}
+{% endwith %}
+
+</body>
+</html>
