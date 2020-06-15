@@ -3,6 +3,7 @@ FROM $BASE
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND=noninteractive
 ARG TZ=Europe/Paris
+ENV LANG=C.UTF-8
 ARG BUILD_DEV=y
 ARG PY_VER=3.6
 # See https://github.com/nodejs/docker-node/issues/380
@@ -52,5 +53,3 @@ RUN bash -c 'set -ex \
 # image will drop privileges itself using gosu
 WORKDIR /code/src
 CMD "/code/init/init.sh"
-
-ENV LANG=C.UTF-8
