@@ -174,7 +174,7 @@ TERRA_APPLIANCE_SETTINGS = {
   "map": {
     "accessToken": os.environ.get('MAPBOX_GL_ACCESS_TOKEN'),
     "center": [0, 0],
-    "zoom": 10,
+    "zoom": 4,
     "maxBounds": [[-180, -90], [180, 90]],
     "backgroundStyle": [
         {"label": "Plan", "url": "mapbox://styles/mapbox/streets-v9"},
