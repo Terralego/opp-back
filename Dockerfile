@@ -2,7 +2,6 @@ ARG BASE=corpusops/ubuntu-bare:bionic
 FROM $BASE
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Europe/Paris
 ARG BUILD_DEV=y
 ARG PY_VER=3.6
 # See https://github.com/nodejs/docker-node/issues/380
