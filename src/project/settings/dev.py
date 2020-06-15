@@ -8,7 +8,9 @@ from .base import *  # noqa
 os.environ['RELATIVE_SETTINGS_MODULE'] = '.dev'
 SECRET_KEY = os.environ.get('SECRET_KEY', 'secretkey-superhot-12345678')
 ALLOWED_HOSTS = ['*']
-INTERNAL_IPS = ('127.0.0.1', '172.18.0.1')  # Used by app debug_toolbar
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda x: True,
+}
 DEBUG = True
 SWAGGER_ENABLED = DEBUG
 
