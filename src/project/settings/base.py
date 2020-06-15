@@ -1,13 +1,10 @@
 """
 Django settings
 """
-from __future__ import absolute_import, division, print_function
 
-import copy
 import os
 from datetime import timedelta
 
-import six
 from django.utils.log import DEFAULT_LOGGING
 from terra_utils.helpers import Choices
 
@@ -64,7 +61,7 @@ DATABASES = {
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
         'HOST': os.environ.get('POSTGRES_HOST', 'db'),
-        'PORT': '',
+        'PORT': os.environ.get('POSTGRES_PORT', 5432),
     }
 }
 
@@ -140,8 +137,8 @@ SERIALIZATION_MODULES = {
 LOCALE_PATHS = (
     os.path.join(PROJECT_DIR, 'locales'),
 )
-LANGUAGE_CODE = 'fr-fr'
-TIME_ZONE = 'Europe/Paris'
+LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', 'en-us')
+TIME_ZONE = os.getenv('TZ', 'UTC')
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
