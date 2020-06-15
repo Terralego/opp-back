@@ -2,7 +2,6 @@ ARG BASE=corpusops/ubuntu-bare:bionic
 FROM $BASE
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND=noninteractive
-ARG TZ=Europe/Paris
 ENV LANG=C.UTF-8
 ARG BUILD_DEV=y
 ARG PY_VER=3.6
