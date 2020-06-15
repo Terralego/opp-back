@@ -52,3 +52,5 @@ RUN bash -c 'set -ex \
 # image will drop privileges itself using gosu
 WORKDIR /code/src
 CMD "/code/init/init.sh"
+
+ENV LANG=C.UTF-8
