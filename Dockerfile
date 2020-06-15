@@ -17,6 +17,7 @@ RUN bash -c 'set -ex \
     && apt-get update -qq \
     && apt-get install -qq -y $(grep -vE "^\s*#" /code/apt.txt  | tr "\n" " ") \
     && apt-get clean all && apt-get autoclean \
+    && apt-get clean all && rm -rf /var/apt/lists/* && rm -rf /var/cache/apt/* \
     && : "project user & workdir" \
     && useradd -ms /bin/bash django --uid 1000'
 
