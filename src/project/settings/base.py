@@ -168,9 +168,9 @@ STATES.add_subset('MANUAL', (
 ))
 
 TERRA_APPLIANCE_SETTINGS = {
-  "map":{
+  "map": {
     "accessToken": os.environ.get('MAPBOX_GL_ACCESS_TOKEN'),
-    "center" : [-61.0134945, 14.6376395],
+    "center": [-61.0134945, 14.6376395],
     "zoom": 10,
     "maxBounds": [[-64, 11], [-58, 17]]
   },
