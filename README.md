@@ -148,6 +148,12 @@ downloaded and/or built.
 
 ### Populate the database
 
+First of all, run all the migrations :
+
+```sh
+$ docker-compose exec django /code/venv/bin/python3 /code/src/manage.py migrate
+```
+
 To be able to connect you need to create a super user. Execute:
 
 ```sh
