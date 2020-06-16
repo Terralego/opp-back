@@ -19,7 +19,6 @@ gdal-bin
 gettext
 postgresql-server-dev-all
 postgresql-client
-tzdata
 libmagic-dev
 
 # weasyprint-related
