@@ -2,7 +2,6 @@ ARG BASE=corpusops/ubuntu-bare:bionic
 FROM $BASE
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND=noninteractive
-ARG TZ=Europe/Paris
 ENV LANG=C.UTF-8
 ARG BUILD_DEV=y
 ARG PY_VER=3.6
@@ -15,12 +14,10 @@ ADD apt.txt /code/apt.txt
 
 # setup project timezone, dependencies, user & workdir, gosu
 RUN bash -c 'set -ex \
-    && : "set correct timezone" \
-    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
-    && : "install packages" \
     && apt-get update -qq \
     && apt-get install -qq -y $(grep -vE "^\s*#" /code/apt.txt  | tr "\n" " ") \
     && apt-get clean all && apt-get autoclean \
+    && apt-get clean all && rm -rf /var/apt/lists/* && rm -rf /var/cache/apt/* \
     && : "project user & workdir" \
     && useradd -ms /bin/bash django --uid 1000'
 
