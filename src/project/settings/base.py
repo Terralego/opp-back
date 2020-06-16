@@ -174,6 +174,7 @@ TERRA_APPLIANCE_SETTINGS = {
      ],
   },
   'enabled_modules': ['OPP'],
+  "language": LANGUAGE_CODE,
 }
 
 TROPP_VIEWPOINT_PROPERTIES_SET = {
