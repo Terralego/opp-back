@@ -57,6 +57,7 @@ the following requirements:
 * Any load balancer (HaProxy, Traefik, ...) to redirect queries to backend
   (and frontend)
 * A hostname pointing to the backend server
+* A [MapBox access token](https://docs.mapbox.com/help/glossary/access-token) (if you use mapbox base layers or services)
 * Optional (recommended): a set of extra subdomains also pointing to the backend
   server to serve tiles from the same server but bypass the browser limit.
   Drastically improve performances
@@ -101,6 +102,8 @@ $ cp docker.env.dist docker.env
 
 Use your preferred editor to edit the created file and modify the values.
 Read the comments in the file to get hints on the purpose of each variable.
+
+Take care to fill MAPBOX_GL_ACCESS_TOKEN with a valid mapbox token.
 
 You can now copy the settings file:
 
