@@ -14,34 +14,34 @@
   <img src="{% static 'bandeau.png' %}" />
 </div>
 
-<h1>Fiche de rephotographie</h1>
+<h1>{% trans "Rephotography sheet" %}</h1>
 
 {% with lon=viewpoint.point.geom.0|unlocalize lat=viewpoint.point.geom.1|unlocalize first_pic=viewpoint.pictures.earliest %}
   {% spaceless %}
-  <dl class="adresse">
-    <dt>Commune</dt>
+  <dl class="address">
+    <dt>{% trans "Municipality" %}</dt>
     <dd>{{ viewpoint.properties.commune }}</dd>
-    <dt>Adresse</dt>
+    <dt>{% trans "Address" %}}</dt>
     <dd>{{ viewpoint.properties.voie }}</dd>
-    <dt>Site</dt>
+    <dt>{% trans "Site" %}}</dt>
     <dd>{{ viewpoint.properties.site }}</dd>
-    <dt>Observations</dt>
+    <dt>{% trans "Comments" %}}</dt>
     <dd>{{ viewpoint.properties.rephotographie }}</dd>
   </dl>
   <dl class="props">
-    <dt>Latitude</dt>
+    <dt>{% trans "Latitude" %}</dt>
     <dd>{{ lat|floatformat:-5 }}</dd>
-    <dt>Longitude</dt>
+    <dt>{% trans "Longitude" %}}</dt>
     <dd>{{ lon|floatformat:-5 }}</dd>
-    <dt>Altitude</dt>
+    <dt>{% trans "Altitude" %}}</dt>
     <dd>{{ first_pic.properties.altitude }} m</dd>
-    <dt>Hauteur de l'oeil</dt>
+    <dt>{% trans "Eye height" %}}</dt>
     <dd>{{ first_pic.properties.hauteur }}</dd>
-    <dt>Azimut</dt>
+    <dt>{% trans "Azimuth" %}}</dt>
     <dd>{{ first_pic.properties.orientation }}°</dd>
-    <dt>Focale 35mm</dt>
+    <dt>{% trans "Focal length 35mm" %}}</dt>
     <dd>{{ first_pic.properties.focale_35mm }}</dd>
-    <dt>Focale objectif</dt>
+    <dt>{% trans "Lens' focal length" %}}</dt>
     <dd>{{ first_pic.properties.focale_objectif }}</dd>
   </dl>
   {% endspaceless %}
@@ -57,13 +57,13 @@
   <div class="clearfix"></div>
 
   <div class="block">
-    <label>Photo de référence</label>
+    <label>{% trans "Reference photo" %}</label>
     <img src="{{ first_pic.file.thumbnail.750x1500.url }}" class="viewpoint-picture" />
   </div>
 
   {% if viewpoint.pictures.count > 1 %}
     <div class="block">
-      <label>Dernière photographie</label>
+      <label>{% trans "Last photography" %}</label>
       <img src="{{ viewpoint.pictures.latest.file.thumbnail.750x1500.url }}" class="viewpoint-picture" />
     </div>
   {% endif %}

@@ -38,7 +38,7 @@ dl, .half-width {
   width: 50%;
 }
 
-.adresse {
+.address {
   width: 70%;
 }
 
@@ -61,11 +61,11 @@ dd, dt {
   text-align: right;
 }
 
-.adresse dt {
+.address dt {
   width: 25%;
 }
 
-.adresse dd {
+.address dd {
   width: 75%;
 }
 
