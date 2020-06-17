@@ -10,6 +10,7 @@ from terra_utils.helpers import Choices
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
+PUBLIC_DIR = os.path.join(os.path.dirname(os.path.dirname(PROJECT_DIR)), 'public')
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'secretkey-superhot-12345678')
 
@@ -141,9 +142,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-STATIC_ROOT = '/code/public/static/'
+STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static')
 STATIC_URL = '/static_dj/'
-MEDIA_ROOT = '/code/public/media/'
+MEDIA_ROOT = os.path.join(PUBLIC_DIR, 'media')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
