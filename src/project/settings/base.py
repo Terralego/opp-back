@@ -149,7 +149,7 @@ STATICFILES_DIRS = (
 )
 
 # Terralego settings
-STATES = Choices(
+TROPP_STATES = Choices(
     ('DRAFT', 100, 'Draft'),
     ('SUBMITTED', 200, 'Submitted'),
     ('ACCEPTED', 300, 'Accepted'),
@@ -157,7 +157,7 @@ STATES = Choices(
     ('CANCELLED', -100, 'Cancelled'),
     ('MISSING', 0, 'Missing'),
 )
-STATES.add_subset('MANUAL', (
+TROPP_STATES.add_subset('MANUAL', (
     'DRAFT',
     'SUBMITTED',
     'ACCEPTED',
