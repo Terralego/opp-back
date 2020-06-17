@@ -11,6 +11,8 @@ from terra_utils.helpers import Choices
 PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
+SECRET_KEY = os.environ.get('SECRET_KEY', 'secretkey-superhot-12345678')
+
 # Installed apps
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -202,8 +204,6 @@ MIN_TILE_ZOOM = 5
 MAX_TILE_ZOOM = 23
 
 TILE_FLAVOR = 'smart'
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 # AWS S3
 AWS_ACCESS_KEY_ID = 'minio'

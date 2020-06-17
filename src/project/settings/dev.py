@@ -6,7 +6,6 @@ import six
 from .base import *  # noqa
 
 os.environ['RELATIVE_SETTINGS_MODULE'] = '.dev'
-SECRET_KEY = os.environ.get('SECRET_KEY', 'secretkey-superhot-12345678')
 ALLOWED_HOSTS = ['*']
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': lambda x: True,
