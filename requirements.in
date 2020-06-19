@@ -1,0 +1,7 @@
+django==2.2.*
+terra-opp==0.3.6
+terra-common  # depecrated, use django-datastore instead
+django-storages
+boto3
+raven
+gunicorn
