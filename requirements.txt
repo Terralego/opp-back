@@ -2,9 +2,8 @@ Django==2.2.5
 django-redis>=4.9,<4.10
 django-geostore>=0.3.5,<0.4
 django-terra-utils>=0.3.6,<0.4
-terra-common>=0.3.2,<0.4
 django-terra-accounts>=0.3.3,<0.4
-terra-opp==0.3.6
+terra-opp>=0.3.7
 Pillow>=5.3.0,<6.0.0
 django-storages>=1.7,<1.8
 django-versatileimagefield>=1.10,<2.0
