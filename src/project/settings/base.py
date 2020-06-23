@@ -33,8 +33,7 @@ CUSTOM_APPS = (
     'geostore',
     'terra_utils',
     'terra_accounts',
-    'terracommon.datastore',
-    'terracommon.events',
+    'datastore',
     'terra_opp',
 )
 
