@@ -3,7 +3,7 @@ import os
 TERRA_APPLIANCE_SETTINGS = {
   "map": {
     "accessToken": os.environ.get('MAPBOX_GL_ACCESS_TOKEN'),
-    "center": [-2.948, 47.4811],
+    "center": [-2.9233, 47.424],
     "zoom": 10,
     "maxBounds": [[-180, -90], [180, 90]],
     "backgroundStyle": [
