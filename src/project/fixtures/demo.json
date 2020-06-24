@@ -1,0 +1,389 @@
+[
+  {
+    "model": "geostore.layer",
+    "pk": 1,
+    "fields": {
+      "name": "Base opp layer",
+      "schema": {},
+      "created_at": "2019-11-18T15:28:17.927495",
+      "updated_at": "2019-11-18T15:28:17.927495"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 1,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.22654756395852 47.3006534331834)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 1,
+    "fields": {
+      "label": "Port Coton",
+      "point": 1,
+      "properties": {
+        "index": "1",
+        "commune": "BANGOR",
+        "voie": "",
+        "site": "Port Coton",
+        "themes": [
+          "Paysages littoraux"
+        ],
+        "paysage": "Aiguilles de PORT COTON,. Paysage peint par Claude MONET, John Peter Russell, Charles COTTET,... "
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "2",
+    "fields": {
+      "email": "anne-rose-pey@example.org",
+      "properties": {
+        "name": "Anne Rose PEY",
+        "label": "Anne Rose PEY"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 1,
+    "fields": {
+      "created_at": "2019-11-14T22:00:00",
+      "updated_at": "2019-11-14T22:00:00",
+      "owner": 2,
+      "viewpoint": 1,
+      "state": 300,
+      "properties": {},
+      "file": "./photos/port_coton.jpg",
+      "date": "2019-11-14T22:00:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 2,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.0994749925967 47.3155592315257)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 2,
+    "fields": {
+      "label": "Grands sables Kerdavid",
+      "point": 2,
+      "properties": {
+        "index": "2",
+        "commune": "LOCMARIA",
+        "voie": "Sentier côtier à partir du parking côté Samzun au plus haut de la montée en regard d'un arbuste",
+        "site": "Grands sables Kerdavid",
+        "themes": [
+          "Paysages littoraux"
+        ],
+        "paysage": "Il s'agit de l'érosion littorale et de la perte du bastion fortifié de la plage des grands sables, côté de Kerdavid. Ce bastion fortifié est classé monument historique depuis 2001 mais la mer et l'absence d'entretien le mettent en péril. Un projet de sauvegarde est en cours sur ce front partagé entre la commune de locmaria, le Morbihan et un propriétaire privé qui possède la partie centrale avec le fort de la Ferrière. Le cliché est pris avec la marée basse coefficient 86."
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 3,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.11167381573084 47.3197438218437)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 3,
+    "fields": {
+      "label": "Locmaria Grands sables",
+      "point": 3,
+      "properties": {
+        "index": "3",
+        "commune": "LOCMARIA",
+        "voie": "",
+        "site": "Locmaria Grands Sables",
+        "themes": [
+          "Paysages littoraux"
+        ],
+        "paysage": "Un siècle d'oubli a causé la ruine du front bastionné, pourtant inscrit aux Monuments Historiques (fortifications de 1747 et 1858): avec érosion de la mer et non entretien des bastions. Restauration souhaitée par la Société historique et l'un des propriétaires (fort de la Ferrière). Ce front bastionné se situe sur le grève de 1,5 km des Grands sables ,rade propice à l'échouage."
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 4,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.1125159503187 47.3214129290009)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 4,
+    "fields": {
+      "label": "Locmaria Grands sables bunkers NO",
+      "point": 4,
+      "properties": {
+        "index": "4",
+        "commune": "LOCMARIA",
+        "voie": "plage des grands sables bunkers NO",
+        "site": "Locmaria Grands sables bunkers NO",
+        "themes": [
+          "Paysages littoraux"
+        ],
+        "paysage": "L'érosion littorale met à mal les falaises de schiste , notamment les bunkers du mur de l'Atlantique: ceux photographiés sont soit déjà dans l'eau soit en voie de chuter. A noter qu'ils avaient pris corps dans les fortifications des 17°/18° siècles qui disparaissent aussi."
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 5,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.18865312103573 47.3149900889175)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 5,
+    "fields": {
+      "label": "Bangor centre bourg",
+      "point": 5,
+      "properties": {
+        "index": "5",
+        "commune": "BANGOR",
+        "voie": "plage des grands sables bunkers NO",
+        "site": "Bangor centre bourg",
+        "themes": [],
+        "paysage": "Le PLU de Bangor prévoit l'aménagement de tout l'espace situé entre l'église et la placette des commerces avec notamment la construction d'un bâtiment pour logement et activités. On photographie l'état actuel du centre bourg avec une série associée intitulée Bangor derrière la nef de l'église"
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 6,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.18816493743084 47.3147163968339)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "3",
+    "fields": {
+      "email": "béatrice-crickx@example.org",
+      "properties": {
+        "name": "Béatrice Crickx",
+        "label": "Béatrice Crickx"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-03-09T12:00:00",
+      "updated_at": "2020-03-09T12:00:00",
+      "owner": 3,
+      "viewpoint": 6,
+      "state": 300,
+      "properties": {},
+      "file": "./photos/bangor_centre_bourg_eglise.jpg",
+      "date": "2020-03-09T12:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 6,
+    "fields": {
+      "label": "Bangor centre bourg derrière nef église",
+      "point": 6,
+      "properties": {
+        "index": "6",
+        "commune": "BANGOR",
+        "voie": "champ situé derrière la nef de l'églis de Bangor",
+        "site": "Bangor centre bourg derrière nef église",
+        "themes": [],
+        "paysage": "Cette série complète celle de Bangor centre bourg: en effet la mairie a racheté le champ et le bâtiment en pierre derrière l'église pour compléter le ré aménagement de l'espace public situé entre l'église et les commerces"
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 7,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.15910587059009 47.3349583289854)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 7,
+    "fields": {
+      "label": "Le Gouerch zone à aménager",
+      "point": 7,
+      "properties": {
+        "index": "7",
+        "commune": "LE PALAIS",
+        "voie": "Le Gouerch route de Borthélo",
+        "site": "Le Gouerch zone à aménager",
+        "themes": [],
+        "paysage": "La zone agricole du Gouerch en arrière des équipements sportifs de le Palais est destinée à être aménagée en équipements selon les données du PLU 2019. Le schéma du PLU est visible sur la série intitulée Le Gouerch Penecam"
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 8,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.15852650625766 47.3359217296853)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 8,
+    "fields": {
+      "label": "Urbanisation Le Gouerch/Penecam",
+      "point": 8,
+      "properties": {
+        "index": "8",
+        "commune": "LE PALAIS",
+        "voie": "Le Gouech, route de Borthélo",
+        "site": "Urbanisation Le Gouerch/Penecam",
+        "themes": [],
+        "paysage": "Ce secteur, voisin de l'ensemble sportif et du collège et proche d'un supermarché est encore occupé par des champs utilisés comme réserve de pâturage . la révision du PLU prévoit un double aménagement: des équipements pour prolonger ceux des sports et du collège (secteur le Gouech) et sur le secteur Penecam un lotissement. De cet environnement vert ne sera préservé que la zone humide restreinte en bas de pente."
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 9,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.15867671714787 47.3366742693205)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 9,
+    "fields": {
+      "label": "Penecam côté route côtière",
+      "point": 9,
+      "properties": {
+        "index": "9",
+        "commune": "LE PALAIS",
+        "voie": "Penecam",
+        "site": "Penecam côté route côtière",
+        "themes": [],
+        "paysage": "Sur Penecam, il est prévu sur le nouveau PLU 2019, d'établir un lotissement d'environ 50 maisons. On prend un cliché avant tous travaux de la zone à partir de la route côtière."
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 10,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.16030750022868 47.3468233522043)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 10,
+    "fields": {
+      "label": "Palais Icade Saint Louis droite",
+      "point": 10,
+      "properties": {
+        "index": "10",
+        "commune": "LE PALAIS",
+        "voie": "de la rue Eva Jouan au pied de la batisse jaune",
+        "site": "Palais Icade Saint Louis droite",
+        "themes": [],
+        "paysage": "Projet lancé de la reconstruction partielle en conservant l'aspect général des anciens bâtiments de l'hôpital le long de la saline"
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 11,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.16022166954016 47.3470850505997)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 11,
+    "fields": {
+      "label": "Icade Saint Louis Gauche",
+      "point": 11,
+      "properties": {
+        "index": "11",
+        "commune": "LE PALAIS",
+        "voie": "Rue ou promenade Eva Jouan mais à 30 m du Pont Orgo (1° pilonne en bois sur la rive)",
+        "site": "Icade Saint Louis Gauche",
+        "themes": [],
+        "paysage": "Projet de reconstruction partielle de l'ancien hôpital de Palais le long de la Saline. La photo gauche permet de voir la cour"
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  }
+]
