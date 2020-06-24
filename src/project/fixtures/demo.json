@@ -88,7 +88,7 @@
         "voie": "",
         "site": "Dunes de Saint-Pierre",
         "themes": [
-          "Paysages littoraux"
+          "Habiter le Golfe"
         ],
         "paysage": "Observer l'évolution d'un littoral atlantique sablo-dunaire"
       },
@@ -259,6 +259,161 @@
       "properties": {},
       "file": "./photos/06_0472_11.jpg",
       "date": "2016-04-05T17:30:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 3,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.13478895649033 47.542881254137)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2013-07-11T12:15:00",
+      "updated_at": "2013-07-11T12:15:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 3,
+    "fields": {
+      "label": "Isthme de Penthièvre",
+      "point": 3,
+      "properties": {
+        "index": "3",
+        "commune": "SAINT-PIERRE-QUIBERON",
+        "voie": "Fort de Penthièvre",
+        "site": "Isthme de Penthièvre",
+        "themes": [
+          "Évolution des systèmes dunaires"
+        ],
+        "paysage": "Nous sommes sur un site concerné par de nombreux usages : urbanisation, activités militaires (fort et usage de la plage pour des exercices militaires), infrastructures de transports (route et ancienne ligne de chemin de fer), activités de loisirs (char à voile)."
+      },
+      "created_at": "2013-07-11T12:15:00",
+      "updated_at": "2013-07-11T12:15:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "4",
+    "fields": {
+      "email": "legrand-helene@example.org",
+      "properties": {
+        "name": "Legrand Hélène",
+        "label": "Legrand Hélène"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 13,
+    "fields": {
+      "created_at": "2013-07-11T12:15:00",
+      "updated_at": "2013-07-11T12:15:00",
+      "owner": 4,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "On voit l'estran et la dune résiduelle.En arrière plan, l'urbanisation de l'isthme est bien perceptible."
+      },
+      "file": "./photos/08_0187_1.jpg",
+      "date": "2013-07-11T12:15:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "5",
+    "fields": {
+      "email": "le-mao-camille@example.org",
+      "properties": {
+        "name": "Le Mao Camille",
+        "label": "Le Mao Camille"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 14,
+    "fields": {
+      "created_at": "2014-07-16T11:43:00",
+      "updated_at": "2014-07-16T11:43:00",
+      "owner": 5,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "La végétation de la dune est sans doute piétinée par les promeneurs. Un bâtiment au passage à niveau a été détruit."
+      },
+      "file": "./photos/08_0187_2.jpg",
+      "date": "2014-07-16T11:43:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "6",
+    "fields": {
+      "email": "anne-lise-jaillais@example.org",
+      "properties": {
+        "name": "Anne-Lise Jaillais",
+        "label": "Anne-Lise Jaillais"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 15,
+    "fields": {
+      "created_at": "2017-07-20T13:00:00",
+      "updated_at": "2017-07-20T13:00:00",
+      "owner": 6,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "La végétation de la dune est encore plus dégradée. On voit d'ailleurs deux personnes se promener au milieu de cette végétation."
+      },
+      "file": "./photos/08_0187_3.jpg",
+      "date": "2017-07-20T13:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 16,
+    "fields": {
+      "created_at": "2018-06-26T11:05:00",
+      "updated_at": "2018-06-26T11:05:00",
+      "owner": 6,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "Des militaires du fort de Penthièvre s'entraînent sur la plage. La flore de la dune est encore plus dégradée."
+      },
+      "file": "./photos/08_0187_4.jpg",
+      "date": "2018-06-26T11:05:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "7",
+    "fields": {
+      "email": "bourdier-marceau@example.org",
+      "properties": {
+        "name": "Bourdier Marceau",
+        "label": "Bourdier Marceau"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 17,
+    "fields": {
+      "created_at": "2019-06-18T12:30:00",
+      "updated_at": "2019-06-18T12:30:00",
+      "owner": 7,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune."
+      },
+      "file": "./photos/08_0187_5.jpg",
+      "date": "2019-06-18T12:30:00"
     }
   }
 ]
