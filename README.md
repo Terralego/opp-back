@@ -193,7 +193,7 @@ and the frontend for everything else.
 
 Run the Django management command to import the demo's data :
 ```sh
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml exec django /code/venv/bin/python3 /code/src/manage.py loaddata demo
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml exec django /code/venv/bin/python3 /code/src/manage.py import_demo_data
 ```
 
 Then add the required settings in demo.py to your local.py settings file :
