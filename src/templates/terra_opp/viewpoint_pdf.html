@@ -21,27 +21,27 @@
   <dl class="address">
     <dt>{% trans "Municipality" %}</dt>
     <dd>{{ viewpoint.properties.commune }}</dd>
-    <dt>{% trans "Address" %}}</dt>
+    <dt>{% trans "Address" %}</dt>
     <dd>{{ viewpoint.properties.voie }}</dd>
-    <dt>{% trans "Site" %}}</dt>
+    <dt>{% trans "Site" %}</dt>
     <dd>{{ viewpoint.properties.site }}</dd>
-    <dt>{% trans "Comments" %}}</dt>
+    <dt>{% trans "Comments" %}</dt>
     <dd>{{ viewpoint.properties.rephotographie }}</dd>
   </dl>
   <dl class="props">
     <dt>{% trans "Latitude" %}</dt>
     <dd>{{ lat|floatformat:-5 }}</dd>
-    <dt>{% trans "Longitude" %}}</dt>
+    <dt>{% trans "Longitude" %}</dt>
     <dd>{{ lon|floatformat:-5 }}</dd>
-    <dt>{% trans "Altitude" %}}</dt>
+    <dt>{% trans "Altitude" %}</dt>
     <dd>{{ first_pic.properties.altitude }} m</dd>
-    <dt>{% trans "Eye height" %}}</dt>
+    <dt>{% trans "Eye height" %}</dt>
     <dd>{{ first_pic.properties.hauteur }}</dd>
-    <dt>{% trans "Azimuth" %}}</dt>
+    <dt>{% trans "Azimuth" %}</dt>
     <dd>{{ first_pic.properties.orientation }}°</dd>
-    <dt>{% trans "Focal length 35mm" %}}</dt>
+    <dt>{% trans "Focal length 35mm" %}</dt>
     <dd>{{ first_pic.properties.focale_35mm }}</dd>
-    <dt>{% trans "Lens' focal length" %}}</dt>
+    <dt>{% trans "Lens' focal length" %}</dt>
     <dd>{{ first_pic.properties.focale_objectif }}</dd>
   </dl>
   {% endspaceless %}
