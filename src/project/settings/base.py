@@ -26,7 +26,6 @@ INSTALLED_APPS = (
     'rest_framework',
     'rest_framework_gis',
     'drf_yasg',
-    'storages',
     'versatileimagefield',
 )
 
@@ -43,7 +42,6 @@ INSTALLED_APPS += CUSTOM_APPS
 
 # Main settings
 AUTH_USER_MODEL = 'terra_accounts.TerraUser'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 CACHES = {
     "default": {
@@ -204,15 +202,6 @@ MIN_TILE_ZOOM = 5
 MAX_TILE_ZOOM = 23
 
 TILE_FLAVOR = 'smart'
-
-# AWS S3
-AWS_ACCESS_KEY_ID = 'minio'
-AWS_SECRET_ACCESS_KEY = 'minio123'
-AWS_STORAGE_BUCKET_NAME = 'opp'
-AWS_S3_ENDPOINT_URL = 'http://minio:9000/'
-AWS_DEFAULT_ACL = None
-AWS_S3_CUSTOM_DOMAIN = 'localhost:9000/opp'
-AWS_S3_SECURE_URLS = False
 
 # Mail
 EMAIL_HOST = 'mailcatcher'
