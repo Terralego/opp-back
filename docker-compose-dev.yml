@@ -14,6 +14,8 @@ services:
     - "443:443"
   backup: {<<: [ *bypass ]}
   django:
+    stdin_open: true
+    tty: true
     environment:
       - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-project.settings.dev}
       - NO_MIGRATE=1
