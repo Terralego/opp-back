@@ -188,6 +188,20 @@ serve backend from the following prefixes:
 `api/, admin/, cms/, media/, static_dj/, 502.html, mailcatcher/`
 and the frontend for everything else.
 
+
+## Demo
+
+Run the Django management command to import the demo's data :
+```sh
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml exec django /code/venv/bin/python3 /code/src/manage.py import_demo_data
+```
+
+Then add the required settings in demo.py to your local.py settings file :
+```sh
+cat src/project/settings/demo.py >> src/project/settings/local.py
+```
+
+
 # Troubleshooting
 
 ## In general

@@ -1,0 +1,964 @@
+[
+  {
+    "model": "geostore.layer",
+    "pk": 1,
+    "fields": {
+      "name": "Base opp layer",
+      "schema": {},
+      "created_at": "2019-11-18T15:28:17.927495",
+      "updated_at": "2019-11-18T15:28:17.927495"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 1,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.22654756395852 47.3006534331834)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 1,
+    "fields": {
+      "label": "Port Coton",
+      "point": 1,
+      "properties": {
+        "index": "1",
+        "commune": "BANGOR",
+        "voie": "",
+        "site": "Port Coton",
+        "themes": [
+          "Paysage de littoral",
+          "Paysages d'îles"
+        ],
+        "paysage": "Aiguilles de PORT COTON,. Paysage peint par Claude MONET, John Peter Russell, Charles COTTET,... "
+      },
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "2",
+    "fields": {
+      "email": "anne-rose-pey@example.org",
+      "properties": {
+        "name": "Anne Rose PEY",
+        "label": "Anne Rose PEY"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 1,
+    "fields": {
+      "created_at": "2019-11-14T22:00:00",
+      "updated_at": "2019-11-14T22:00:00",
+      "owner": 2,
+      "viewpoint": 1,
+      "state": 300,
+      "properties": {
+        "camera_brand": "FUJI",
+        "geometry": {
+          "coordinates": [
+            -3.22654756395852,
+            47.3006534331834
+          ]
+        }
+      },
+      "file": "./photos/port_coton.jpg",
+      "date": "2019-11-14T22:00:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 2,
+    "fields": {
+      "geom": "SRID=4326;POINT (-2.97122299999999 47.559226)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2007-11-03T12:36:00",
+      "updated_at": "2007-11-03T12:36:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 2,
+    "fields": {
+      "label": "Dunes de Saint-Pierre",
+      "point": 2,
+      "properties": {
+        "index": "2",
+        "commune": "LOCMARIAQUER",
+        "voie": "",
+        "site": "Dunes de Saint-Pierre",
+        "themes": [
+          "Habiter le Golfe",
+          "Paysage de littoral",
+          "Paysages d'îles"
+        ],
+        "paysage": "Observer l'évolution d'un littoral atlantique sablo-dunaire"
+      },
+      "created_at": "2005-04-07T09:00:00",
+      "updated_at": "2005-04-07T09:00:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "3",
+    "fields": {
+      "email": "david-ledan@example.org",
+      "properties": {
+        "name": "David Lédan",
+        "label": "David Lédan"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 2,
+    "fields": {
+      "created_at": "2005-04-07T09:00:00",
+      "updated_at": "2005-04-07T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_1.jpg",
+      "date": "2005-04-07T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 3,
+    "fields": {
+      "created_at": "2006-04-07T08:10:00",
+      "updated_at": "2006-04-07T08:10:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_2.jpg",
+      "date": "2006-04-07T08:10:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 4,
+    "fields": {
+      "created_at": "2007-04-07T08:57:00",
+      "updated_at": "2007-04-07T08:57:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_3.jpg",
+      "date": "2007-04-07T08:57:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 5,
+    "fields": {
+      "created_at": "2008-04-07T09:01:00",
+      "updated_at": "2008-04-07T09:01:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_4.jpg",
+      "date": "2008-04-07T09:01:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 6,
+    "fields": {
+      "created_at": "2009-04-10T09:00:00",
+      "updated_at": "2009-04-10T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_5.jpg",
+      "date": "2009-04-10T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 7,
+    "fields": {
+      "created_at": "2010-04-19T09:00:00",
+      "updated_at": "2010-04-19T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_6.jpg",
+      "date": "2010-04-19T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 8,
+    "fields": {
+      "created_at": "2011-04-07T09:00:00",
+      "updated_at": "2011-04-07T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_7.jpg",
+      "date": "2011-04-07T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 9,
+    "fields": {
+      "created_at": "2012-04-05T09:00:00",
+      "updated_at": "2012-04-05T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_8.jpg",
+      "date": "2012-04-05T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 10,
+    "fields": {
+      "created_at": "2014-04-07T09:00:00",
+      "updated_at": "2014-04-07T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_9.jpg",
+      "date": "2014-04-07T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 11,
+    "fields": {
+      "created_at": "2015-04-07T09:00:00",
+      "updated_at": "2015-04-07T09:00:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_10.jpg",
+      "date": "2015-04-07T09:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 12,
+    "fields": {
+      "created_at": "2016-04-05T17:30:00",
+      "updated_at": "2016-04-05T17:30:00",
+      "owner": 3,
+      "viewpoint": 2,
+      "state": 300,
+      "properties": {
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "0",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.97122299999999,
+            47.559226
+          ]
+        }
+      },
+      "file": "./photos/06_0472_11.jpg",
+      "date": "2016-04-05T17:30:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 3,
+    "fields": {
+      "geom": "SRID=4326;POINT (-3.13478895649033 47.542881254137)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2013-07-11T12:15:00",
+      "updated_at": "2013-07-11T12:15:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 3,
+    "fields": {
+      "label": "Isthme de Penthièvre",
+      "point": 3,
+      "properties": {
+        "index": "3",
+        "commune": "SAINT-PIERRE-QUIBERON",
+        "voie": "Fort de Penthièvre",
+        "site": "Isthme de Penthièvre",
+        "themes": [
+          "Évolution des systèmes dunaires",
+          "Paysage de littoral",
+          "Paysages d'îles"
+        ],
+        "paysage": "Nous sommes sur un site concerné par de nombreux usages : urbanisation, activités militaires (fort et usage de la plage pour des exercices militaires), infrastructures de transports (route et ancienne ligne de chemin de fer), activités de loisirs (char à voile)."
+      },
+      "created_at": "2013-07-11T12:15:00",
+      "updated_at": "2013-07-11T12:15:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "4",
+    "fields": {
+      "email": "legrand-helene@example.org",
+      "properties": {
+        "name": "Legrand Hélène",
+        "label": "Legrand Hélène"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 13,
+    "fields": {
+      "created_at": "2013-07-11T12:15:00",
+      "updated_at": "2013-07-11T12:15:00",
+      "owner": 4,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "On voit l'estran et la dune résiduelle.En arrière plan, l'urbanisation de l'isthme est bien perceptible.",
+        "camera_brand": "Nikon",
+        "camera_model": "Nikon D7000",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -3.13478895649033,
+            47.542881254137
+          ]
+        }
+      },
+      "file": "./photos/08_0187_1.jpg",
+      "date": "2013-07-11T12:15:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "5",
+    "fields": {
+      "email": "le-mao-camille@example.org",
+      "properties": {
+        "name": "Le Mao Camille",
+        "label": "Le Mao Camille"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 14,
+    "fields": {
+      "created_at": "2014-07-16T11:43:00",
+      "updated_at": "2014-07-16T11:43:00",
+      "owner": 5,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "La végétation de la dune est sans doute piétinée par les promeneurs. Un bâtiment au passage à niveau a été détruit.",
+        "camera_brand": "Nikon",
+        "camera_model": "Nikon D7000",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -3.13478895649033,
+            47.542881254137
+          ]
+        }
+      },
+      "file": "./photos/08_0187_2.jpg",
+      "date": "2014-07-16T11:43:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "6",
+    "fields": {
+      "email": "anne-lise-jaillais@example.org",
+      "properties": {
+        "name": "Anne-Lise Jaillais",
+        "label": "Anne-Lise Jaillais"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 15,
+    "fields": {
+      "created_at": "2017-07-20T13:00:00",
+      "updated_at": "2017-07-20T13:00:00",
+      "owner": 6,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "La végétation de la dune est encore plus dégradée. On voit d'ailleurs deux personnes se promener au milieu de cette végétation.",
+        "camera_brand": "Nikon",
+        "camera_model": "Nikon D7000",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -3.13478895649033,
+            47.542881254137
+          ]
+        }
+      },
+      "file": "./photos/08_0187_3.jpg",
+      "date": "2017-07-20T13:00:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 16,
+    "fields": {
+      "created_at": "2018-06-26T11:05:00",
+      "updated_at": "2018-06-26T11:05:00",
+      "owner": 6,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "Des militaires du fort de Penthièvre s'entraînent sur la plage. La flore de la dune est encore plus dégradée.",
+        "camera_brand": "Nikon",
+        "camera_model": "Nikon D7000",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -3.13478895649033,
+            47.542881254137
+          ]
+        }
+      },
+      "file": "./photos/08_0187_4.jpg",
+      "date": "2018-06-26T11:05:00"
+    }
+  },
+  {
+    "model": "terra_accounts.TerraUser",
+    "pk": "7",
+    "fields": {
+      "email": "bourdier-marceau@example.org",
+      "properties": {
+        "name": "Bourdier Marceau",
+        "label": "Bourdier Marceau"
+      }
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 17,
+    "fields": {
+      "created_at": "2019-06-18T12:30:00",
+      "updated_at": "2019-06-18T12:30:00",
+      "owner": 7,
+      "viewpoint": 3,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "Nikon",
+        "camera_model": "Nikon D7000",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -3.13478895649033,
+            47.542881254137
+          ]
+        }
+      },
+      "file": "./photos/08_0187_5.jpg",
+      "date": "2019-06-18T12:30:00"
+    }
+  },
+  {
+    "model": "geostore.feature",
+    "pk": 4,
+    "fields": {
+      "geom": "SRID=4326;POINT (-2.72726099999999 47.509241)",
+      "layer": 1,
+      "properties": {},
+      "created_at": "2005-04-11T16:28:00",
+      "updated_at": "2005-04-11T16:28:00"
+    }
+  },
+  {
+    "model": "terra_opp.viewpoint",
+    "pk": 4,
+    "fields": {
+      "label": "Marais et château de Suscinio",
+      "point": 4,
+      "properties": {
+        "index": "4",
+        "commune": "SARZEAU",
+        "voie": "",
+        "site": "Marais et château de Suscinio",
+        "themes": [
+          "Le patrimoine"
+        ],
+        "paysage": "Observer l'évolution de la végétation sur fond de site emblèmatique"
+      },
+      "created_at": "2005-04-11T16:28:00",
+      "updated_at": "2005-04-11T16:28:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 18,
+    "fields": {
+      "created_at": "2005-04-11T16:28:00",
+      "updated_at": "2005-04-11T16:28:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_1.jpg",
+      "date": "2005-04-11T16:28:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 19,
+    "fields": {
+      "created_at": "2006-04-06T08:34:00",
+      "updated_at": "2006-04-06T08:34:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_2.jpg",
+      "date": "2006-04-06T08:34:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 20,
+    "fields": {
+      "created_at": "2007-04-06T08:30:00",
+      "updated_at": "2007-04-06T08:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_3.jpg",
+      "date": "2007-04-06T08:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 21,
+    "fields": {
+      "created_at": "2008-04-06T09:30:00",
+      "updated_at": "2008-04-06T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_4.jpg",
+      "date": "2008-04-06T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 22,
+    "fields": {
+      "created_at": "2009-04-07T09:30:00",
+      "updated_at": "2009-04-07T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_5.jpg",
+      "date": "2009-04-07T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 23,
+    "fields": {
+      "created_at": "2010-04-18T09:30:00",
+      "updated_at": "2010-04-18T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_6.jpg",
+      "date": "2010-04-18T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 24,
+    "fields": {
+      "created_at": "2011-04-06T09:30:00",
+      "updated_at": "2011-04-06T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_7.jpg",
+      "date": "2011-04-06T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 25,
+    "fields": {
+      "created_at": "2012-04-06T09:30:00",
+      "updated_at": "2012-04-06T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_8.jpg",
+      "date": "2012-04-06T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 26,
+    "fields": {
+      "created_at": "2013-04-06T09:30:00",
+      "updated_at": "2013-04-06T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_9.jpg",
+      "date": "2013-04-06T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 27,
+    "fields": {
+      "created_at": "2014-04-08T09:30:00",
+      "updated_at": "2014-04-08T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_10.jpg",
+      "date": "2014-04-08T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 28,
+    "fields": {
+      "created_at": "2015-04-08T09:30:00",
+      "updated_at": "2015-04-08T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_11.jpg",
+      "date": "2015-04-08T09:30:00"
+    }
+  },
+  {
+    "model": "terra_opp.picture",
+    "pk": 29,
+    "fields": {
+      "created_at": "2016-04-06T09:30:00",
+      "updated_at": "2016-04-06T09:30:00",
+      "owner": 3,
+      "viewpoint": 4,
+      "state": 300,
+      "properties": {
+        "remarks": "Un chemin piéton/cycliste a été aménagé le long de la voie ferrée. Une barrière sépare le chemin de la voie ferrée pour la sécurité, et une ganivelle évite les promeneurs à fouler la dune.",
+        "camera_brand": "CANON",
+        "camera_model": "CANON 5D",
+        "hauteur": "170",
+        "orientation": "315",
+        "focale_objectif": "50",
+        "geometry": {
+          "coordinates": [
+            -2.72726099999999,
+            47.509241
+          ]
+        }
+      },
+      "file": "./photos/06_0804_12.jpg",
+      "date": "2016-04-06T09:30:00"
+    }
+  }
+]
