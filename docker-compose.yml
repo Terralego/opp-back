@@ -12,15 +12,12 @@ x-images:
     - db
     - redis
     - setup-postgres
-    - minio
-    - setup-bucket
     working_dir: /code/src
     command:
     - sh
     - '-c'
     - >-
       :
-      && dockerize -wait http://setup-bucket   -timeout $${MINIO_STARTUP_TIMEOUT}
       && dockerize -wait http://setup-postgres -timeout $${POSTGRES_STARTUP_TIMEOUT}
       && /bin/bash /code/init/init.sh
     volumes:
@@ -108,14 +105,6 @@ services:
   #   <<: [ *env ]
   #   image: makinacorpus/convertit
   #   hostname: convertit
-  minio:
-    <<: [ *env ]
-    image: minio/minio
-    ports:
-      - "9000:9000"
-    volumes:
-      - minio_data:/data
-    command: server /data
   setup-postgres:
     <<: [ *env ]
     image: corpusops/pgrouting:10.1-2.5.4
@@ -137,29 +126,6 @@ services:
       );then touch $$flag && break;fi;done )&
       set -x \
       && dockerize -wait file://$$flag -timeout $${POSTGRES_STARTUP_TIMEOUT} \
-      && while true;do printf "HTTP/1.1 200 OK\n\nstarted"| ( nc -l -p 80 || /bin/true);done
-  setup-bucket:
-    <<: [ *env ]
-    image: corpusops/mc
-    depends_on:
-    - minio
-    entrypoint:
-    - /bin/sh
-    - '-c'
-    - |-
-      set -ex
-      MINIO_STARTUP_TIMEOUT=$${MINIO_STARTUP_TIMEOUT:-30s}
-      flag=/started_$$(echo $$DJANGO__AWS_S3_ENDPOINT_URL|sed -re "s![/:]!__!g")
-      if [ -e "$$flag" ];then rm -f "$$flag";fi
-      echo "Try connection to $$DJANGO__AWS_S3_ENDPOINT_URL" >&2 \
-      && ( while true;do if ( \
-        mc config host add minio \
-          $$DJANGO__AWS_S3_ENDPOINT_URL $$MINIO_ACCESS_KEY $$MINIO_SECRET_KEY \
-      );then touch $$flag && break;fi;done )&
-      set -x \
-      && dockerize -wait file://$$flag -timeout $${MINIO_STARTUP_TIMEOUT} \
-      && mc mb --ignore-existing minio/$$DJANGO__AWS_STORAGE_BUCKET_NAME \
-      && mc policy set download minio/$$DJANGO__AWS_STORAGE_BUCKET_NAME \
       && while true;do printf "HTTP/1.1 200 OK\n\nstarted"| ( nc -l -p 80 || /bin/true);done
 volumes:
   backupdb-logs:

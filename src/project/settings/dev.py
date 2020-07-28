@@ -21,6 +21,8 @@ MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
+MEDIA_URL = '/media/'
+
 # Force every loggers to use console handler only. Note that using 'root'
 # logger is not enough if children don't propage.
 for logger in six.itervalues(LOGGING['loggers']):  # noqa
