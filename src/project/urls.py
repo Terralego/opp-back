@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
 
 urlpatterns = [
     path('api/', include('geostore.urls')),
@@ -31,4 +34,29 @@ if settings.DEBUG and 'debug_toolbar' in settings.INSTALLED_APPS:
 
     urlpatterns += [
         path('__debug__/', include(debug_toolbar.urls)),
+    ]
+
+if settings.DEBUG or settings.SWAGGER_ENABLED:
+    schema_view = get_schema_view(
+        openapi.Info(
+            title="OPP API",
+            default_version='v1',
+            description="Going further with your OPP",
+        ),
+        public=True,
+        permission_classes=(permissions.AllowAny,),
+    )
+
+    urlpatterns += [
+        # schemas
+        path(
+            'swagger/',
+            schema_view.with_ui('swagger', cache_timeout=0),
+            name='schema-swagger-ui'
+        ),
+        path(
+            'redoc/',
+            schema_view.with_ui('redoc', cache_timeout=0),
+            name='schema-redoc'
+        ),
     ]

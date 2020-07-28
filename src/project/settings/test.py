@@ -2,6 +2,8 @@ from __future__ import absolute_import, division, print_function
 
 import tempfile
 
+import six
+
 from .base import *  # noqa
 
 for a in INSTALLED_APPS:
