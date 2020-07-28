@@ -135,6 +135,9 @@ docker-compose -f docker-compose.yml -f docker-compose-dev.yml build # Should be
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up django # Should be launched once each time you want to start the stack
 ```
 
+As the back and the front of this application are running on different ports, you will have to use an application in dev mode to handle the cors requests.
+We recommand using [CORS Everywhere](https://addons.mozilla.org/fr/firefox/addon/cors-everywhere/)
+
 #### For production purpose
 
 ```sh
@@ -145,6 +148,8 @@ docker-compose -f docker-compose.yml -f docker-compose-prod.yml up django # Shou
 # Migrations will automatically be run with production settings. Once the initial migrations are done, you can launch all containers
 docker-compose -f docker-compose.yml -f docker-compose-prod.yml up
 ```
+
+TODO: instructions for CORS in production mode using Nginx.
 
 **notes:** The first startup can be long (5 ~ 10 minutes) as all docker images will be
 downloaded and/or built.
