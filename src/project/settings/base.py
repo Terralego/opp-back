@@ -10,6 +10,9 @@ from terra_utils.helpers import Choices
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
+PUBLIC_DIR = os.path.join(os.path.dirname(os.path.dirname(PROJECT_DIR)), 'public')
+
+SECRET_KEY = os.environ.get('SECRET_KEY', 'secretkey-superhot-12345678')
 
 # Installed apps
 INSTALLED_APPS = (
@@ -139,15 +142,15 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-STATIC_ROOT = '/code/public/static/'
+STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static')
 STATIC_URL = '/static_dj/'
-MEDIA_ROOT = '/code/public/media/'
+MEDIA_ROOT = os.path.join(PUBLIC_DIR, 'media')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
 # Terralego settings
-STATES = Choices(
+TROPP_STATES = Choices(
     ('DRAFT', 100, 'Draft'),
     ('SUBMITTED', 200, 'Submitted'),
     ('ACCEPTED', 300, 'Accepted'),
@@ -155,7 +158,7 @@ STATES = Choices(
     ('CANCELLED', -100, 'Cancelled'),
     ('MISSING', 0, 'Missing'),
 )
-STATES.add_subset('MANUAL', (
+TROPP_STATES.add_subset('MANUAL', (
     'DRAFT',
     'SUBMITTED',
     'ACCEPTED',
@@ -201,8 +204,6 @@ MIN_TILE_ZOOM = 5
 MAX_TILE_ZOOM = 23
 
 TILE_FLAVOR = 'smart'
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 # AWS S3
 AWS_ACCESS_KEY_ID = 'minio'
