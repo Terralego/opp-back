@@ -137,6 +137,5 @@ volumes:
     name: "${DJANGO_NAME}back-statics"
     external: false
   logs:
-  minio_data:
   mails:
   certs:
