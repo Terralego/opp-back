@@ -1,19 +1,14 @@
-import csv
 import json
-import re
 from collections import defaultdict
-from datetime import datetime
 from enum import Enum
-from html.parser import HTMLParser
-from itertools import count
 from pathlib import Path
 
 from django.core.files.storage import DefaultStorage
 from django.core.management import BaseCommand, CommandError, call_command
-from django.utils.html import strip_spaces_between_tags
-from django.utils.text import slugify
-from django.utils.timezone import now
 from django.utils.translation import ugettext as _
+
+from terra_opp.models import Viewpoint
+from terra_opp.signals import update_or_create_viewpoint
 
 
 class FileState(Enum):
@@ -35,8 +30,10 @@ class Command(BaseCommand):
             action='store',
             default=self.folder + '/placeholder.jpg',
             required=False,
-            help=_(f'A file name located in {self.folder} to be used as '
-                   f'default image'),
+            help=_(
+                f'A file name located in {self.folder} to be used as '
+                f'default image'
+            ),
         )
 
     def handle(self, *args, **options):
@@ -58,17 +55,22 @@ class Command(BaseCommand):
         # Fixture import part
         if not (folder / 'demo.json').exists():
             raise CommandError(
-                f"Fixture file {folder / 'demo.json'} does not exist, "
+                f"Fixture file {folder / 'demo.json'} does not exist"
             )
 
         with open('%s/demo.json' % self.folder) as f:
 
-            # Upload images to bucket
+            # Upload pictures
             self.upload_pictures(f, folder, default_image)
 
             # Import fixture
             self.stdout.write("Importing features...")
             call_command('loaddata', 'demo')
+
+            # Rerun the signal process as no instance of pictures
+            # where existing on viewpoint creation
+            for viewpoint in Viewpoint.objects.all():
+                update_or_create_viewpoint(viewpoint)
 
     def upload_pictures(self, fixture, folder, default_image):
         """
@@ -84,12 +86,12 @@ class Command(BaseCommand):
         images = set([i['fields']['file'] for i in fixtures
                       if i['model'] == 'terra_opp.picture'])
         states = defaultdict(int)
-        self.stdout.write("Uploading images on bucket... (may take a while)")
+        self.stdout.write("Uploading images ... (may take a while)")
 
         # Build a report
-        states[self.save_image_on_bucket(folder, default_image.name)] += 1
+        states[self.save_image(folder, default_image.name)] += 1
         for image in images:
-            states[self.save_image_on_bucket(folder, image)] += 1
+            states[self.save_image(folder, image)] += 1
 
         self.stdout.write(self.style.SUCCESS(
             f"{states[FileState.NOT_PRESENT]} missing\n"
@@ -97,9 +99,9 @@ class Command(BaseCommand):
             f"{states[FileState.EXISTING]} existing\n"
         ))
 
-    def save_image_on_bucket(self, folder: Path, image: str):
+    def save_image(self, folder: Path, image: str):
         """
-        Check on minio bucket if the file is present and upload it if needed
+        Check if the file is present and save it if needed
 
         :param folder:
         :param image:
@@ -109,12 +111,10 @@ class Command(BaseCommand):
             # Locate it on the fie system
             image_path = folder / image
             if not image_path.exists():
-                self.stdout.write(self.style.WARNING(
-                    f"{image} not in {folder}"
-                ))
+                self.stdout.write(self.style.WARNING(f"{image} not in {folder}"))
                 return FileState.NOT_PRESENT
             else:
-                # Upload to minio bucket
+                # Save the file
                 with image_path.open('rb') as fi:
                     self.storage.save(image, fi)
                 return FileState.UPLOADED
