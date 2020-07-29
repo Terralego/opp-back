@@ -95,7 +95,6 @@ ROOT_URLCONF = 'project.urls'
 
 LOGGING = DEFAULT_LOGGING
 
-
 # DRF-related
 REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
@@ -164,17 +163,37 @@ TROPP_STATES.add_subset('MANUAL', (
     'CANCELLED',
 ))
 
+IGN = {
+    "version": 8,
+    "sources": {
+        "ign-orthophoto": {
+            "type": "raster",
+            "tiles": [
+                "https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+            ],
+            "minzoom": 0,
+            "maxzoom": 22
+        }
+    },
+    "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
+    "glyphs": "mapbox://fonts/makinacorpus/{fontstack}/{range}.pbf",
+    "layers": [
+        {"id": "ign-orthophoto-background", "type": "raster", "source": "ign-orthophoto"}
+    ]
+}
+
 TERRA_APPLIANCE_SETTINGS = {
-  "map": {
-    "accessToken": os.environ.get('MAPBOX_GL_ACCESS_TOKEN'),
-    "center": [0, 0],
-    "zoom": 4,
-    "maxBounds": [[-180, -90], [180, 90]],
-    "backgroundStyle": [
-        {"label": "Plan", "url": "mapbox://styles/mapbox/streets-v9"},
-     ],
-  },
-  'enabled_modules': ['OPP'],
+    "map": {
+        "accessToken": os.environ.get('MAPBOX_GL_ACCESS_TOKEN'),
+        "center": [0, 0],
+        "zoom": 4,
+        "maxBounds": [[-180, -90], [180, 90]],
+        "backgroundStyle": [
+            {"label": "Plan", "url": "mapbox://styles/mapbox/streets-v9"},
+            {"label": "Orthophoto IGN", "url": IGN},
+        ],
+    },
+    'enabled_modules': ['OPP'],
 }
 
 TROPP_VIEWPOINT_PROPERTIES_SET = {
@@ -190,12 +209,12 @@ TROPP_VIEWPOINT_PROPERTIES_SET = {
 TERRA_USER_STRING_FORMAT = 'project.utils.user_string_format'
 
 VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
-  'terra_opp': [
-    ('original', 'url'),
-    ('full', 'thumbnail__1500x1125'),
-    ('list', 'thumbnail__300x225'),
-    ('thumbnail', 'thumbnail__180x120'),
-  ]
+    'terra_opp': [
+        ('original', 'url'),
+        ('full', 'thumbnail__1500x1125'),
+        ('list', 'thumbnail__300x225'),
+        ('thumbnail', 'thumbnail__180x120'),
+    ]
 }
 
 MIN_TILE_ZOOM = 5
