@@ -5,8 +5,8 @@
     "fields": {
       "name": "Base opp layer",
       "schema": {},
-      "created_at": "2019-11-18T15:28:17.927495",
-      "updated_at": "2019-11-18T15:28:17.927495"
+      "created_at": "2019-11-18T15:28:17+01:00",
+      "updated_at": "2019-11-18T15:28:17+01:00"
     }
   },
   {
@@ -16,8 +16,8 @@
       "geom": "SRID=4326;POINT (-3.22654756395852 47.3006534331834)",
       "layer": 1,
       "properties": {},
-      "created_at": "2007-11-03T12:36:00",
-      "updated_at": "2007-11-03T12:36:00"
+      "created_at": "2007-11-03T12:36:00+01:00",
+      "updated_at": "2007-11-03T12:36:00+01:00"
     }
   },
   {
@@ -37,8 +37,8 @@
         ],
         "paysage": "Aiguilles de PORT COTON,. Paysage peint par Claude MONET, John Peter Russell, Charles COTTET,... "
       },
-      "created_at": "2007-11-03T12:36:00",
-      "updated_at": "2007-11-03T12:36:00"
+      "created_at": "2007-11-03T12:36:00+01:00",
+      "updated_at": "2007-11-03T12:36:00+01:00"
     }
   },
   {
@@ -56,8 +56,8 @@
     "model": "terra_opp.picture",
     "pk": 1,
     "fields": {
-      "created_at": "2019-11-14T22:00:00",
-      "updated_at": "2019-11-14T22:00:00",
+      "created_at": "2019-11-14T22:00:00+01:00",
+      "updated_at": "2019-11-14T22:00:00+01:00",
       "owner": 2,
       "viewpoint": 1,
       "state": 300,
@@ -71,7 +71,7 @@
         }
       },
       "file": "./photos/port_coton.jpg",
-      "date": "2019-11-14T22:00:00"
+      "date": "2019-11-14T22:00:00+01:00"
     }
   },
   {
@@ -81,8 +81,8 @@
       "geom": "SRID=4326;POINT (-2.97122299999999 47.559226)",
       "layer": 1,
       "properties": {},
-      "created_at": "2007-11-03T12:36:00",
-      "updated_at": "2007-11-03T12:36:00"
+      "created_at": "2007-11-03T12:36:00+01:00",
+      "updated_at": "2007-11-03T12:36:00+01:00"
     }
   },
   {
@@ -103,8 +103,8 @@
         ],
         "paysage": "Observer l'évolution d'un littoral atlantique sablo-dunaire"
       },
-      "created_at": "2005-04-07T09:00:00",
-      "updated_at": "2005-04-07T09:00:00"
+      "created_at": "2005-04-07T09:00:00+01:00",
+      "updated_at": "2005-04-07T09:00:00+01:00"
     }
   },
   {
@@ -122,8 +122,8 @@
     "model": "terra_opp.picture",
     "pk": 2,
     "fields": {
-      "created_at": "2005-04-07T09:00:00",
-      "updated_at": "2005-04-07T09:00:00",
+      "created_at": "2005-04-07T09:00:00+01:00",
+      "updated_at": "2005-04-07T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -141,15 +141,15 @@
         }
       },
       "file": "./photos/06_0472_1.jpg",
-      "date": "2005-04-07T09:00:00"
+      "date": "2005-04-07T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 3,
     "fields": {
-      "created_at": "2006-04-07T08:10:00",
-      "updated_at": "2006-04-07T08:10:00",
+      "created_at": "2006-04-07T08:10:00+01:00",
+      "updated_at": "2006-04-07T08:10:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -167,15 +167,15 @@
         }
       },
       "file": "./photos/06_0472_2.jpg",
-      "date": "2006-04-07T08:10:00"
+      "date": "2006-04-07T08:10:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 4,
     "fields": {
-      "created_at": "2007-04-07T08:57:00",
-      "updated_at": "2007-04-07T08:57:00",
+      "created_at": "2007-04-07T08:57:00+01:00",
+      "updated_at": "2007-04-07T08:57:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -193,15 +193,15 @@
         }
       },
       "file": "./photos/06_0472_3.jpg",
-      "date": "2007-04-07T08:57:00"
+      "date": "2007-04-07T08:57:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 5,
     "fields": {
-      "created_at": "2008-04-07T09:01:00",
-      "updated_at": "2008-04-07T09:01:00",
+      "created_at": "2008-04-07T09:01:00+01:00",
+      "updated_at": "2008-04-07T09:01:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -219,15 +219,15 @@
         }
       },
       "file": "./photos/06_0472_4.jpg",
-      "date": "2008-04-07T09:01:00"
+      "date": "2008-04-07T09:01:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 6,
     "fields": {
-      "created_at": "2009-04-10T09:00:00",
-      "updated_at": "2009-04-10T09:00:00",
+      "created_at": "2009-04-10T09:00:00+01:00",
+      "updated_at": "2009-04-10T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -245,15 +245,15 @@
         }
       },
       "file": "./photos/06_0472_5.jpg",
-      "date": "2009-04-10T09:00:00"
+      "date": "2009-04-10T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 7,
     "fields": {
-      "created_at": "2010-04-19T09:00:00",
-      "updated_at": "2010-04-19T09:00:00",
+      "created_at": "2010-04-19T09:00:00+01:00",
+      "updated_at": "2010-04-19T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -271,15 +271,15 @@
         }
       },
       "file": "./photos/06_0472_6.jpg",
-      "date": "2010-04-19T09:00:00"
+      "date": "2010-04-19T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 8,
     "fields": {
-      "created_at": "2011-04-07T09:00:00",
-      "updated_at": "2011-04-07T09:00:00",
+      "created_at": "2011-04-07T09:00:00+01:00",
+      "updated_at": "2011-04-07T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -297,15 +297,15 @@
         }
       },
       "file": "./photos/06_0472_7.jpg",
-      "date": "2011-04-07T09:00:00"
+      "date": "2011-04-07T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 9,
     "fields": {
-      "created_at": "2012-04-05T09:00:00",
-      "updated_at": "2012-04-05T09:00:00",
+      "created_at": "2012-04-05T09:00:00+01:00",
+      "updated_at": "2012-04-05T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -323,15 +323,15 @@
         }
       },
       "file": "./photos/06_0472_8.jpg",
-      "date": "2012-04-05T09:00:00"
+      "date": "2012-04-05T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 10,
     "fields": {
-      "created_at": "2014-04-07T09:00:00",
-      "updated_at": "2014-04-07T09:00:00",
+      "created_at": "2014-04-07T09:00:00+01:00",
+      "updated_at": "2014-04-07T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -349,15 +349,15 @@
         }
       },
       "file": "./photos/06_0472_9.jpg",
-      "date": "2014-04-07T09:00:00"
+      "date": "2014-04-07T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 11,
     "fields": {
-      "created_at": "2015-04-07T09:00:00",
-      "updated_at": "2015-04-07T09:00:00",
+      "created_at": "2015-04-07T09:00:00+01:00",
+      "updated_at": "2015-04-07T09:00:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -375,15 +375,15 @@
         }
       },
       "file": "./photos/06_0472_10.jpg",
-      "date": "2015-04-07T09:00:00"
+      "date": "2015-04-07T09:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 12,
     "fields": {
-      "created_at": "2016-04-05T17:30:00",
-      "updated_at": "2016-04-05T17:30:00",
+      "created_at": "2016-04-05T17:30:00+01:00",
+      "updated_at": "2016-04-05T17:30:00+01:00",
       "owner": 3,
       "viewpoint": 2,
       "state": 300,
@@ -401,7 +401,7 @@
         }
       },
       "file": "./photos/06_0472_11.jpg",
-      "date": "2016-04-05T17:30:00"
+      "date": "2016-04-05T17:30:00+01:00"
     }
   },
   {
@@ -411,8 +411,8 @@
       "geom": "SRID=4326;POINT (-3.13478895649033 47.542881254137)",
       "layer": 1,
       "properties": {},
-      "created_at": "2013-07-11T12:15:00",
-      "updated_at": "2013-07-11T12:15:00"
+      "created_at": "2013-07-11T12:15:00+01:00",
+      "updated_at": "2013-07-11T12:15:00+01:00"
     }
   },
   {
@@ -433,8 +433,8 @@
         ],
         "paysage": "Nous sommes sur un site concerné par de nombreux usages : urbanisation, activités militaires (fort et usage de la plage pour des exercices militaires), infrastructures de transports (route et ancienne ligne de chemin de fer), activités de loisirs (char à voile)."
       },
-      "created_at": "2013-07-11T12:15:00",
-      "updated_at": "2013-07-11T12:15:00"
+      "created_at": "2013-07-11T12:15:00+01:00",
+      "updated_at": "2013-07-11T12:15:00+01:00"
     }
   },
   {
@@ -452,8 +452,8 @@
     "model": "terra_opp.picture",
     "pk": 13,
     "fields": {
-      "created_at": "2013-07-11T12:15:00",
-      "updated_at": "2013-07-11T12:15:00",
+      "created_at": "2013-07-11T12:15:00+01:00",
+      "updated_at": "2013-07-11T12:15:00+01:00",
       "owner": 4,
       "viewpoint": 3,
       "state": 300,
@@ -470,7 +470,7 @@
         }
       },
       "file": "./photos/08_0187_1.jpg",
-      "date": "2013-07-11T12:15:00"
+      "date": "2013-07-11T12:15:00+01:00"
     }
   },
   {
@@ -488,8 +488,8 @@
     "model": "terra_opp.picture",
     "pk": 14,
     "fields": {
-      "created_at": "2014-07-16T11:43:00",
-      "updated_at": "2014-07-16T11:43:00",
+      "created_at": "2014-07-16T11:43:00+01:00",
+      "updated_at": "2014-07-16T11:43:00+01:00",
       "owner": 5,
       "viewpoint": 3,
       "state": 300,
@@ -506,7 +506,7 @@
         }
       },
       "file": "./photos/08_0187_2.jpg",
-      "date": "2014-07-16T11:43:00"
+      "date": "2014-07-16T11:43:00+01:00"
     }
   },
   {
@@ -524,8 +524,8 @@
     "model": "terra_opp.picture",
     "pk": 15,
     "fields": {
-      "created_at": "2017-07-20T13:00:00",
-      "updated_at": "2017-07-20T13:00:00",
+      "created_at": "2017-07-20T13:00:00+01:00",
+      "updated_at": "2017-07-20T13:00:00+01:00",
       "owner": 6,
       "viewpoint": 3,
       "state": 300,
@@ -542,15 +542,15 @@
         }
       },
       "file": "./photos/08_0187_3.jpg",
-      "date": "2017-07-20T13:00:00"
+      "date": "2017-07-20T13:00:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 16,
     "fields": {
-      "created_at": "2018-06-26T11:05:00",
-      "updated_at": "2018-06-26T11:05:00",
+      "created_at": "2018-06-26T11:05:00+01:00",
+      "updated_at": "2018-06-26T11:05:00+01:00",
       "owner": 6,
       "viewpoint": 3,
       "state": 300,
@@ -567,7 +567,7 @@
         }
       },
       "file": "./photos/08_0187_4.jpg",
-      "date": "2018-06-26T11:05:00"
+      "date": "2018-06-26T11:05:00+01:00"
     }
   },
   {
@@ -585,8 +585,8 @@
     "model": "terra_opp.picture",
     "pk": 17,
     "fields": {
-      "created_at": "2019-06-18T12:30:00",
-      "updated_at": "2019-06-18T12:30:00",
+      "created_at": "2019-06-18T12:30:00+01:00",
+      "updated_at": "2019-06-18T12:30:00+01:00",
       "owner": 7,
       "viewpoint": 3,
       "state": 300,
@@ -603,7 +603,7 @@
         }
       },
       "file": "./photos/08_0187_5.jpg",
-      "date": "2019-06-18T12:30:00"
+      "date": "2019-06-18T12:30:00+01:00"
     }
   },
   {
@@ -613,8 +613,8 @@
       "geom": "SRID=4326;POINT (-2.72726099999999 47.509241)",
       "layer": 1,
       "properties": {},
-      "created_at": "2005-04-11T16:28:00",
-      "updated_at": "2005-04-11T16:28:00"
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
     }
   },
   {
@@ -633,16 +633,16 @@
         ],
         "paysage": "Observer l'évolution de la végétation sur fond de site emblèmatique"
       },
-      "created_at": "2005-04-11T16:28:00",
-      "updated_at": "2005-04-11T16:28:00"
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 18,
     "fields": {
-      "created_at": "2005-04-11T16:28:00",
-      "updated_at": "2005-04-11T16:28:00",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -661,15 +661,15 @@
         }
       },
       "file": "./photos/06_0804_1.jpg",
-      "date": "2005-04-11T16:28:00"
+      "date": "2005-04-11T16:28:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 19,
     "fields": {
-      "created_at": "2006-04-06T08:34:00",
-      "updated_at": "2006-04-06T08:34:00",
+      "created_at": "2006-04-06T08:34:00+01:00",
+      "updated_at": "2006-04-06T08:34:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -688,15 +688,15 @@
         }
       },
       "file": "./photos/06_0804_2.jpg",
-      "date": "2006-04-06T08:34:00"
+      "date": "2006-04-06T08:34:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 20,
     "fields": {
-      "created_at": "2007-04-06T08:30:00",
-      "updated_at": "2007-04-06T08:30:00",
+      "created_at": "2007-04-06T08:30:00+01:00",
+      "updated_at": "2007-04-06T08:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -715,15 +715,15 @@
         }
       },
       "file": "./photos/06_0804_3.jpg",
-      "date": "2007-04-06T08:30:00"
+      "date": "2007-04-06T08:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 21,
     "fields": {
-      "created_at": "2008-04-06T09:30:00",
-      "updated_at": "2008-04-06T09:30:00",
+      "created_at": "2008-04-06T09:30:00+01:00",
+      "updated_at": "2008-04-06T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -742,15 +742,15 @@
         }
       },
       "file": "./photos/06_0804_4.jpg",
-      "date": "2008-04-06T09:30:00"
+      "date": "2008-04-06T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 22,
     "fields": {
-      "created_at": "2009-04-07T09:30:00",
-      "updated_at": "2009-04-07T09:30:00",
+      "created_at": "2009-04-07T09:30:00+01:00",
+      "updated_at": "2009-04-07T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -769,15 +769,15 @@
         }
       },
       "file": "./photos/06_0804_5.jpg",
-      "date": "2009-04-07T09:30:00"
+      "date": "2009-04-07T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 23,
     "fields": {
-      "created_at": "2010-04-18T09:30:00",
-      "updated_at": "2010-04-18T09:30:00",
+      "created_at": "2010-04-18T09:30:00+01:00",
+      "updated_at": "2010-04-18T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -796,15 +796,15 @@
         }
       },
       "file": "./photos/06_0804_6.jpg",
-      "date": "2010-04-18T09:30:00"
+      "date": "2010-04-18T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 24,
     "fields": {
-      "created_at": "2011-04-06T09:30:00",
-      "updated_at": "2011-04-06T09:30:00",
+      "created_at": "2011-04-06T09:30:00+01:00",
+      "updated_at": "2011-04-06T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -823,15 +823,15 @@
         }
       },
       "file": "./photos/06_0804_7.jpg",
-      "date": "2011-04-06T09:30:00"
+      "date": "2011-04-06T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 25,
     "fields": {
-      "created_at": "2012-04-06T09:30:00",
-      "updated_at": "2012-04-06T09:30:00",
+      "created_at": "2012-04-06T09:30:00+01:00",
+      "updated_at": "2012-04-06T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -850,15 +850,15 @@
         }
       },
       "file": "./photos/06_0804_8.jpg",
-      "date": "2012-04-06T09:30:00"
+      "date": "2012-04-06T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 26,
     "fields": {
-      "created_at": "2013-04-06T09:30:00",
-      "updated_at": "2013-04-06T09:30:00",
+      "created_at": "2013-04-06T09:30:00+01:00",
+      "updated_at": "2013-04-06T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -877,15 +877,15 @@
         }
       },
       "file": "./photos/06_0804_9.jpg",
-      "date": "2013-04-06T09:30:00"
+      "date": "2013-04-06T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 27,
     "fields": {
-      "created_at": "2014-04-08T09:30:00",
-      "updated_at": "2014-04-08T09:30:00",
+      "created_at": "2014-04-08T09:30:00+01:00",
+      "updated_at": "2014-04-08T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -904,15 +904,15 @@
         }
       },
       "file": "./photos/06_0804_10.jpg",
-      "date": "2014-04-08T09:30:00"
+      "date": "2014-04-08T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 28,
     "fields": {
-      "created_at": "2015-04-08T09:30:00",
-      "updated_at": "2015-04-08T09:30:00",
+      "created_at": "2015-04-08T09:30:00+01:00",
+      "updated_at": "2015-04-08T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -931,15 +931,15 @@
         }
       },
       "file": "./photos/06_0804_11.jpg",
-      "date": "2015-04-08T09:30:00"
+      "date": "2015-04-08T09:30:00+01:00"
     }
   },
   {
     "model": "terra_opp.picture",
     "pk": 29,
     "fields": {
-      "created_at": "2016-04-06T09:30:00",
-      "updated_at": "2016-04-06T09:30:00",
+      "created_at": "2016-04-06T09:30:00+01:00",
+      "updated_at": "2016-04-06T09:30:00+01:00",
       "owner": 3,
       "viewpoint": 4,
       "state": 300,
@@ -958,7 +958,7 @@
         }
       },
       "file": "./photos/06_0804_12.jpg",
-      "date": "2016-04-06T09:30:00"
+      "date": "2016-04-06T09:30:00+01:00"
     }
   }
 ]
