@@ -23,11 +23,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    'django.contrib.sites',
     'rest_framework',
     'rest_framework_gis',
     'drf_yasg',
     'versatileimagefield',
 )
+
+SITE_ID = 1
 
 CUSTOM_APPS = (
     'project',
@@ -227,3 +230,5 @@ EMAIL_HOST = 'mailcatcher'
 EMAIL_PORT = 1025
 
 SWAGGER_ENABLED = False
+
+TROPP_OBSERVATORY_LAYER_PK = 1

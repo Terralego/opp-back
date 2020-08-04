@@ -168,6 +168,10 @@ To be able to connect you need to create a super user. Execute:
 $ docker-compose exec django /code/venv/bin/python3 /code/src/manage.py createsuperuser
 ```
 
+Then you must define your site domain and display name in the django admin.
+
+And set the `SITE_ID` variable in your settings.
+
 Your instance is now up and running.
 
 To test it you can execute:
