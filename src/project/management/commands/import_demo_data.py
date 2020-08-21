@@ -1,19 +1,15 @@
-import csv
 import json
-import re
 from collections import defaultdict
-from datetime import datetime
 from enum import Enum
-from html.parser import HTMLParser
-from itertools import count
 from pathlib import Path
 
 from django.core.files.storage import DefaultStorage
 from django.core.management import BaseCommand, CommandError, call_command
-from django.utils.html import strip_spaces_between_tags
-from django.utils.text import slugify
-from django.utils.timezone import now
+from django.test import RequestFactory
 from django.utils.translation import ugettext as _
+
+from terra_opp.models import Viewpoint
+from terra_opp.utils import update_point_properties
 
 
 class FileState(Enum):
@@ -29,6 +25,14 @@ class Command(BaseCommand):
     storage = DefaultStorage()
 
     def add_arguments(self, parser):
+        parser.add_argument(
+            '-m',
+            '--media',
+            action='store',
+            default='localhost:8000',
+            required=False,
+            help=_(f'Media server url (default: localhost:8000)'),
+        )
         parser.add_argument(
             '-i',
             '--image',
@@ -69,6 +73,11 @@ class Command(BaseCommand):
             # Import fixture
             self.stdout.write("Importing features...")
             call_command('loaddata', 'demo')
+
+            # Update newly created viewpoints' points' properties
+            for viewpoint in Viewpoint.objects.all():
+                req = RequestFactory(SERVER_NAME=options['media']).request()
+                update_point_properties(viewpoint, req)
 
     def upload_pictures(self, fixture, folder, default_image):
         """
