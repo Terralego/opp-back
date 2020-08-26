@@ -9,7 +9,7 @@ from django.test import RequestFactory
 from django.utils.translation import ugettext as _
 
 from terra_opp.models import Viewpoint
-from terra_opp.utils import update_point_properties
+from terra_opp.point_utilities import update_point_properties
 
 
 class FileState(Enum):
