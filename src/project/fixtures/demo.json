@@ -21,20 +21,44 @@
     }
   },
   {
+    "model": "terra_opp.city",
+    "pk": 1,
+    "fields": {
+      "label": "BANGOR",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
+    "model": "terra_opp.theme",
+    "pk": 1,
+    "fields": {
+      "label": "Paysage de littoral",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
+    "model": "terra_opp.theme",
+    "pk": 2,
+    "fields": {
+      "label": "Paysages d'îles",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
     "model": "terra_opp.viewpoint",
     "pk": 1,
     "fields": {
       "label": "Port Coton",
       "point": 1,
+      "city": 1,
+      "themes": [1, 2],
       "properties": {
         "index": "1",
-        "commune": "BANGOR",
         "voie": "",
         "site": "Port Coton",
-        "themes": [
-          "Paysage de littoral",
-          "Paysages d'îles"
-        ],
         "paysage": "Aiguilles de PORT COTON,. Paysage peint par Claude MONET, John Peter Russell, Charles COTTET,... "
       },
       "created_at": "2007-11-03T12:36:00+01:00",
@@ -86,21 +110,35 @@
     }
   },
   {
+    "model": "terra_opp.city",
+    "pk": 2,
+    "fields": {
+      "label": "LOCMARIAQUER",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
+    "model": "terra_opp.theme",
+    "pk": 3,
+    "fields": {
+      "label": "Habiter le Golfe",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
     "model": "terra_opp.viewpoint",
     "pk": 2,
     "fields": {
       "label": "Dunes de Saint-Pierre",
       "point": 2,
+      "city": 2,
+      "themes": [1, 2, 3],
       "properties": {
         "index": "2",
-        "commune": "LOCMARIAQUER",
         "voie": "",
         "site": "Dunes de Saint-Pierre",
-        "themes": [
-          "Habiter le Golfe",
-          "Paysage de littoral",
-          "Paysages d'îles"
-        ],
         "paysage": "Observer l'évolution d'un littoral atlantique sablo-dunaire"
       },
       "created_at": "2005-04-07T09:00:00+01:00",
@@ -416,21 +454,35 @@
     }
   },
   {
+    "model": "terra_opp.city",
+    "pk": 3,
+    "fields": {
+      "label": "SAINT-PIERRE-QUIBERON",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
+    "model": "terra_opp.theme",
+    "pk": 4,
+    "fields": {
+      "label": "Évolution des systèmes dunaires",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
     "model": "terra_opp.viewpoint",
     "pk": 3,
     "fields": {
       "label": "Isthme de Penthièvre",
       "point": 3,
+      "city": 3,
+      "themes": [4, 1, 2],
       "properties": {
         "index": "3",
-        "commune": "SAINT-PIERRE-QUIBERON",
         "voie": "Fort de Penthièvre",
         "site": "Isthme de Penthièvre",
-        "themes": [
-          "Évolution des systèmes dunaires",
-          "Paysage de littoral",
-          "Paysages d'îles"
-        ],
         "paysage": "Nous sommes sur un site concerné par de nombreux usages : urbanisation, activités militaires (fort et usage de la plage pour des exercices militaires), infrastructures de transports (route et ancienne ligne de chemin de fer), activités de loisirs (char à voile)."
       },
       "created_at": "2013-07-11T12:15:00+01:00",
@@ -618,19 +670,35 @@
     }
   },
   {
+    "model": "terra_opp.city",
+    "pk": 4,
+    "fields": {
+      "label": "SARZEAU",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
+    "model": "terra_opp.theme",
+    "pk": 5,
+    "fields": {
+      "label": "Le patrimoine",
+      "created_at": "2005-04-11T16:28:00+01:00",
+      "updated_at": "2005-04-11T16:28:00+01:00"
+    }
+  },
+  {
     "model": "terra_opp.viewpoint",
     "pk": 4,
     "fields": {
       "label": "Marais et château de Suscinio",
       "point": 4,
+      "city": 4,
+      "themes": [5],
       "properties": {
         "index": "4",
-        "commune": "SARZEAU",
         "voie": "",
         "site": "Marais et château de Suscinio",
-        "themes": [
-          "Le patrimoine"
-        ],
         "paysage": "Observer l'évolution de la végétation sur fond de site emblèmatique"
       },
       "created_at": "2005-04-11T16:28:00+01:00",
