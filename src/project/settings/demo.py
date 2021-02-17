@@ -13,5 +13,5 @@ TERRA_APPLIANCE_SETTINGS = {
             {"label": "Orthophoto IGN", "url": IGN},
         ],
     },
-    'enabled_modules': ['OPP'],
+    'enabled_modules': [],
 }

@@ -6,12 +6,10 @@
 <h3 align="center">Opp-back</h3>
 
 <div align="center">
-
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![GitHub Issues](https://img.shields.io/github/issues/terralego/opp-back.svg)](https://github.com/terralego/opp-back/issues)
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/terralego/opp-back.svg)](https://github.com/terralego/opp-back//pulls)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
 </div>
 
 ---
@@ -51,17 +49,17 @@ has his own instructions. To see the frontend part go to
 In order to install the backend server application, you need to fulfil
 the following requirements:
 
-* A linux server with a recent kernel
-* [docker](https://docs.docker.com/install/) >= 18.6 installed
-* [docker-compose](https://docs.docker.com/compose/install/) >= 1.23.0 installed
-* Any load balancer (HaProxy, Traefik, ...) to redirect queries to backend
+- A linux server with a recent kernel
+- [docker](https://docs.docker.com/install/) >= 18.6 installed
+- [docker-compose](https://docs.docker.com/compose/install/) >= 1.23.0 installed
+- Any load balancer (HaProxy, Traefik, ...) to redirect queries to backend
   (and frontend)
-* A hostname pointing to the backend server
-* A [MapBox access token](https://docs.mapbox.com/help/glossary/access-token) (if you use mapbox base layers or services)
-* Optional (recommended): a set of extra subdomains also pointing to the backend
+- A hostname pointing to the backend server
+- A [MapBox access token](https://docs.mapbox.com/help/glossary/access-token) (if you use mapbox base layers or services)
+- Optional (recommended): a set of extra subdomains also pointing to the backend
   server to serve tiles from the same server but bypass the browser limit.
   Drastically improve performances
-* Optional: you can use an instance of [sentry](https://sentry.io/welcome/)
+- Optional: you can use an instance of [sentry](https://sentry.io/welcome/)
   to track server errors
 
 ## Installation
@@ -130,9 +128,9 @@ After a last verification of the files, to run with docker, just type:
 
 ```sh
 # First time you download the app, or sometime to refresh the image
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml pull # Call the docker compose pull command
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml build # Should be launched once each time you want to start the stack
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml up django # Should be launched once each time you want to start the stack
+docker-compose pull # Call the docker compose pull command
+docker-compose build # Should be launched once each time you want to start the stack
+docker-compose up django # Should be launched once each time you want to start the stack
 ```
 
 As the back and the front of this application are running on different ports, you will have to use an application in dev mode to handle the cors requests.
@@ -154,7 +152,7 @@ TODO: instructions for CORS in production mode using Nginx.
 **notes:** The first startup can be long (5 ~ 10 minutes) as all docker images will be
 downloaded and/or built.
 
-### Populate the database
+### Init the database
 
 First of all, run all the migrations :
 
@@ -168,12 +166,24 @@ To be able to connect you need to create a super user. Execute:
 $ docker-compose exec django /code/venv/bin/python3 /code/src/manage.py createsuperuser
 ```
 
+Add the base layer. Execute:
+
+```sh
+$ docker-compose exec django /code/venv/bin/python3 /code/src/manage.py create_observatory_layer -n opp_layer
+```
+
+You get an Id from this command that you have to put in the `src/project/settings/local.py` file.
+
+```sh
+echo "TROPP_OBSERVATORY_LAYER_PK=<id>" >> src/project/settings/local.py
+```
+
 Your instance is now up and running.
 
 To test it you can execute:
 
 ```sh
-curl http://localhost:<port>/api/settings/
+curl http://localhost:8000/api/settings/
 ```
 
 You should get a json in response.
@@ -188,19 +198,17 @@ serve backend from the following prefixes:
 `api/, admin/, cms/, media/, static_dj/, 502.html, mailcatcher/`
 and the frontend for everything else.
 
-
 ## Demo
 
 Run the Django management command to import the demo's data :
 ```sh
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml exec django /code/venv/bin/python3 /code/src/manage.py import_demo_data
+docker-compose exec django /code/venv/bin/python3 /code/src/manage.py import_demo_data
 ```
 
 Then add the required settings in demo.py to your local.py settings file :
 ```sh
 cat src/project/settings/demo.py >> src/project/settings/local.py
 ```
-
 
 # Troubleshooting
 
@@ -254,10 +262,12 @@ docker volume rm $id
 ```
 
 # ⛏️ Built Using <a name = "built_using"></a>
+
 - [Postgres](https://www.postgresql.org/) - Database
 - [Django](https://www.djangoproject.com/) - Python Framework
 - [DjangoRestFramework](https://www.django-rest-framework.org) - Rest Framework
 - [Redis](https://nodejs.org/en/) - Broker
 
 # ✍️ Authors <a name = "authors"></a>
+
 - [@terralego](https://github.com/terralego) - Idea & Initial work
