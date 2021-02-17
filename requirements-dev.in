@@ -1,0 +1,13 @@
+# development
+Django<3.0
+django-debug-toolbar<1.10
+django-extensions
+tox
+coverage
+isort==4.3.4
+pylama
+tblib
+eradicate
+pdb_clone
+
+xlrd
