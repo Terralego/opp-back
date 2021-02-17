@@ -6,7 +6,7 @@ import os
 from datetime import timedelta
 
 from django.utils.log import DEFAULT_LOGGING
-from terra_utils.helpers import Choices
+from terra_opp.helpers import Choices
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -32,7 +32,8 @@ INSTALLED_APPS = (
 CUSTOM_APPS = (
     'project',
     'geostore',
-    'terra_utils',
+    'terra_settings',
+    'mapbox_baselayer',
     'terra_accounts',
     'datastore',
     'terra_opp',
@@ -98,7 +99,7 @@ LOGGING = DEFAULT_LOGGING
 # DRF-related
 REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
-    'DEFAULT_PAGINATION_CLASS': 'terra_utils.pagination.PagePagination',
+    'DEFAULT_PAGINATION_CLASS': 'terra_settings.pagination.PagePagination',
     'PAGE_SIZE': 100,
 
     'DEFAULT_PARSER_CLASSES': (
@@ -121,6 +122,7 @@ REST_FRAMEWORK = {
 }
 
 JWT_AUTH = {
+    'JWT_PAYLOAD_HANDLER': 'terra_accounts.jwt_payload.terra_payload_handler',
     'JWT_EXPIRATION_DELTA': timedelta(hours=1),
     'JWT_ALLOW_REFRESH': True,
 }
@@ -193,7 +195,7 @@ TERRA_APPLIANCE_SETTINGS = {
             {"label": "Orthophoto IGN", "url": IGN},
         ],
     },
-    'enabled_modules': ['OPP'],
+    'enabled_modules': [],
 }
 
 TROPP_VIEWPOINT_PROPERTIES_SET = {

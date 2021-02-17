@@ -24,7 +24,7 @@ from rest_framework import permissions
 urlpatterns = [
     path('api/', include('geostore.urls')),
     path('api/', include('terra_accounts.urls')),
-    path('api/', include('terra_utils.urls')),
+    path('api/', include('terra_settings.urls')),
     path('api/', include('terra_opp.urls')),
     path('dj-admin/', admin.site.urls),
 ]
