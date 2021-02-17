@@ -1,0 +1,12 @@
+Django<3.0
+django-redis<4.11
+
+Pillow<6.0.0
+raven==6.10.0
+drf-yasg
+
+# Terralego
+terra-opp
+
+# webserver
+gunicorn<19.9
