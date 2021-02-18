@@ -5,5 +5,10 @@
 # DEFAULT_FROM_EMAIL = ''
 # SERVER_EMAIL = ''
 # ADMINS = ()
+
 SECRET_KEY = 'super-hot-secret-123456789'
+
+# Create the obsevatory layer, update next next line and uncomment it
+# TROPP_OBSERVATORY_LAYER_PK = 1
+
 # vim:set ft=python:
