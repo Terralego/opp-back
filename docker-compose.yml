@@ -81,6 +81,7 @@ services:
     - SUPERVISORD_CONFIGS=/etc/supervisor.d/cron /etc/supervisor.d/nginx /etc/supervisor.d/rsyslog
   django:
     <<: [ *django ]
+    image: terralego/opp-back:latest
   cron:
     <<: [ *django ]
     command:

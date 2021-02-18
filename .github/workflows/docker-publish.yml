@@ -47,12 +47,9 @@ jobs:
       - name: Log into Container Registry
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
 
-      - name: Build image
+      - name: Build image # docker pull terralego/opp-back
         run: |
-            docker pull terralego/opp-back
             docker pull nginx:stable
-            git submodule init
-            git submodule update
             cp .env.dist .env
             cp docker.env.dist docker.env
             docker-compose build
