@@ -7,7 +7,7 @@ x-images:
     build:
       context: "."
       args:
-        PY_VER: "${DJANGO_PY_VER:-3.6}"
+        TAG: "${IMAGE_TAG:-latest}"
     depends_on:
     - db
     - redis
