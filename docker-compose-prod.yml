@@ -5,7 +5,7 @@ x-django: &django
 services:
   nginx:
     ports:
-    - 80:80
+      - ${VISU_PORT:-80}:80
   cron:
     <<: [ *django ]
   django:

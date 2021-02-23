@@ -245,9 +245,9 @@ docker-compose exec django bash
 ```sh
 docker-compose  exec django /code/venv/bin/python3 /code/src/manage.py shell [options]
 # For instance:
-# docker-compose exec django /code/venv/bin/python3 /code/src/manage.py shell migrate
-# docker-compose exec django /code/venv/bin/python3 /code/src/manage.py shell shell
-# docker-compose exec django /code/venv/bin/python3 /code/src/manage.py shell createsuperuser
+# docker-compose exec django /code/venv/bin/python3 /code/src/manage.py migrate
+# docker-compose exec django /code/venv/bin/python3 /code/src/manage.py shell
+# docker-compose exec django /code/venv/bin/python3 /code/src/manage.py createsuperuser
 # ...
 ```
 
