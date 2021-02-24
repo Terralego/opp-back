@@ -4,6 +4,12 @@ x-images:
     command: 'sh -c "while true;do echo notstarted;sleep 65000;done"'
     entrypoint: 'sh -c "while true;do echo notstarted;sleep 65000;done"'
     restart: "no"
+x-django: &django
+  image: terralego/opp-back:latest
+  build:
+    context: "."
+    args:
+      TAG: "${IMAGE_TAG:-latest}"
 services:
   nginx:
     environment:
@@ -13,7 +19,10 @@ services:
     - "80:80"
     - "443:443"
   backup: {<<: [ *bypass ]}
+  cron:
+    <<: [ *django ]
   django:
+    <<: [ *django ]
     stdin_open: true
     tty: true
     environment:
