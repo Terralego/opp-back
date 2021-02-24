@@ -4,10 +4,6 @@ x-images:
   django: &django
     <<: [ *env ]
     tty: true
-    build:
-      context: "."
-      args:
-        TAG: "${IMAGE_TAG:-latest}"
     depends_on:
     - db
     - redis
@@ -81,7 +77,6 @@ services:
     - SUPERVISORD_CONFIGS=/etc/supervisor.d/cron /etc/supervisor.d/nginx /etc/supervisor.d/rsyslog
   django:
     <<: [ *django ]
-    image: terralego/opp-back:latest
   cron:
     <<: [ *django ]
     command:
