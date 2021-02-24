@@ -67,6 +67,8 @@ cssselect2==0.4.1
 deepmerge==0.1.1
     # via django-geostore
 defusedxml==0.6.0
+django-cors-headers==2.5.3
+    # via -r requirements.in
     # via cairosvg
 django-datastore==0.1.3.5
     # via terra-opp
