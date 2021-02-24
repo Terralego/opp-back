@@ -27,6 +27,7 @@ INSTALLED_APPS = (
     'rest_framework_gis',
     'drf_yasg',
     'versatileimagefield',
+    "corsheaders",
 )
 
 CUSTOM_APPS = (
@@ -73,6 +74,7 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 )
 
 TEMPLATES = [
@@ -95,6 +97,10 @@ TEMPLATES = [
 ROOT_URLCONF = 'project.urls'
 
 LOGGING = DEFAULT_LOGGING
+
+# let DEBUG & CORS be overridable in prod
+DEBUG = False
+CORS_ORIGIN_ALLOW_ALL = False
 
 # DRF-related
 REST_FRAMEWORK = {
