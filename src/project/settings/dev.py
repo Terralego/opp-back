@@ -7,6 +7,7 @@ from .base import *  # noqa
 
 os.environ['RELATIVE_SETTINGS_MODULE'] = '.dev'
 ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': lambda x: True,
 }
