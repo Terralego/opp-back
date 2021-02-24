@@ -3,6 +3,8 @@ x-django: &django
   volumes:
   - ./src/project/settings/local.py:/code/src/project/settings/local.py
   image: "${DJANGO_IMAGE}:${DJANGO_IMAGE_VERSION}"
+  environment:
+    - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-project.settings.prod}
 services:
   nginx:
     ports:
