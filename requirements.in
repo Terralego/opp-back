@@ -10,3 +10,6 @@ terra-opp
 
 # webserver
 gunicorn<19.9
+
+# CORS
+django-cors-headers<3.0
