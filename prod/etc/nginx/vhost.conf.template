@@ -53,11 +53,6 @@ map $http_x_forwarded_host $best_http_host {
     ''               $this_host;
 }
 
-upstream elasticserver {
-    server elasticsearch:9200;
-    keepalive 30;
-}
-
 server {
     listen 80;
 
@@ -202,35 +197,5 @@ server {
     location ~ ^/media/private/ {
         internal;
         root /public/private/;
-    }
-
-    location ^~ /elasticsearch/ {
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Host $http_host;
-        proxy_redirect off;
-        proxy_pass http://elasticserver/;
-
-        # Never cache the API content to prevent proxy caching
-        add_header Pragma "no-cache";
-        add_header Cache-Control "private, max-age=0, no-cache, no-store";
-
-        satisfy all;
-        allow 10.0.0.0/8;
-        allow 172.16.0.0/12;
-        allow 192.168.0.0/16;
-        allow 127.0.0.1;
-        deny  all;
-
-        location ~ ^/elasticsearch/(([^\/]+/)?(_msearch|_search)(/.*)?) {
-            allow all;
-
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header Host $http_host;
-            proxy_redirect off;
-            proxy_pass http://elasticserver/$1$is_args$args;
-
-            add_header Pragma "no-cache";
-            add_header Cache-Control "private, max-age=0, no-cache, no-store";
-        }
     }
 }
