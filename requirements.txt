@@ -67,9 +67,9 @@ cssselect2==0.4.1
 deepmerge==0.1.1
     # via django-geostore
 defusedxml==0.6.0
+    # via cairosvg
 django-cors-headers==2.5.3
     # via -r requirements.in
-    # via cairosvg
 django-datastore==0.1.3.5
     # via terra-opp
 django-filter==2.4.0
@@ -99,6 +99,7 @@ django-versatileimagefield==2.0
 django==2.2.18
     # via
     #   -r requirements.in
+    #   django-cors-headers
     #   django-datastore
     #   django-filter
     #   django-geostore
@@ -217,7 +218,7 @@ six==1.15.0
     #   munch
 sqlparse==0.4.1
     # via django
-terra-opp==0.5.1
+terra-opp==0.5.2
     # via -r requirements.in
 tinycss2==1.1.0
     # via
