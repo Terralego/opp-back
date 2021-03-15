@@ -209,6 +209,33 @@ Then add the required settings in demo.py to your local.py settings file :
 ```sh
 cat src/project/settings/demo.py >> src/project/settings/local.py
 ```
+# Development
+
+## Use custom package
+
+If you are doing some development on opp-back dependency packages and you want to use your package instead of the one provided from pypi, you should do as follow
+
+```sh
+# The source of your package must be inside the lib directory
+# It will be mount as a volume in your container
+
+# First, start your stack
+docker-compose up -d
+
+# Then, access the django container
+docker-compose exec django bash
+
+# Once inside the container, activate virtual env
+source ../venv/bin/activate
+
+# Install your package
+pip install -e /code/lib/my_package
+
+# exit and restart the container
+exit
+docker-compose restart django
+
+```
 
 # Troubleshooting
 
