@@ -13,5 +13,3 @@ services:
     <<: [ *django ]
   django:
     <<: [ *django ]
-    ports:
-    - "8000:8000"
