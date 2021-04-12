@@ -288,6 +288,19 @@ docker volume ls  # hint: |grep \$app
 docker volume rm $id
 ```
 
+# Recipies
+
+# Set default default password to all non admin users
+
+In a django shell execute:
+
+```
+from django.contrib.auth import get_user_model
+User = get_user_model()
+for u in User.objects.filter(is_superuser=False):
+    u.set_password('password')
+    u.save()
+
 # ⛏️ Built Using <a name = "built_using"></a>
 
 - [Postgres](https://www.postgresql.org/) - Database
