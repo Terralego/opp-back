@@ -84,7 +84,7 @@ django-redis==4.10.0
     # via -r requirements.in
 django-terra-accounts==1.0.4
     # via terra-opp
-django-terra-settings==1.0.2
+django-terra-settings==1.0.3
     # via
     #   django-terra-accounts
     #   terra-opp
@@ -141,10 +141,6 @@ html5lib==1.1
     # via weasyprint
 idna==2.10
     # via requests
-importlib-metadata==3.10.0
-    # via
-    #   jsonschema
-    #   kombu
 inflection==0.5.1
     # via drf-yasg
 itypes==1.2.0
@@ -229,8 +225,6 @@ tinycss2==1.1.0
     #   cairosvg
     #   cssselect2
     #   weasyprint
-typing-extensions==3.7.4.3
-    # via importlib-metadata
 uritemplate==3.0.1
     # via
     #   coreapi
@@ -250,8 +244,6 @@ webencodings==0.5.1
     #   cssselect2
     #   html5lib
     #   tinycss2
-zipp==3.4.1
-    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
