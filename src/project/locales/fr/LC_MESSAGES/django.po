@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 12:31+0000\n"
+"POT-Creation-Date: 2021-04-14 09:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: templates/terra_opp/viewpoint_pdf.html:17
 msgid "Rephotography sheet"
 msgstr "Fiche de rephotographie"
 
+#: templates/terra_opp/viewpoint_pdf.html:22
 msgid "Municipality"
 msgstr "Commune"
 
+#: templates/terra_opp/viewpoint_pdf.html:24
 msgid "Address"
 msgstr "Adresse"
 
+#: templates/terra_opp/viewpoint_pdf.html:26
 msgid "Site"
 msgstr ""
 
+#: templates/terra_opp/viewpoint_pdf.html:28
 msgid "Comments"
 msgstr "Observations"
 
+#: templates/terra_opp/viewpoint_pdf.html:32
 msgid "Latitude"
 msgstr ""
 
+#: templates/terra_opp/viewpoint_pdf.html:34
 msgid "Longitude"
 msgstr ""
 
+#: templates/terra_opp/viewpoint_pdf.html:36
 msgid "Altitude"
 msgstr ""
 
+#: templates/terra_opp/viewpoint_pdf.html:38
 msgid "Eye height"
 msgstr "Hauteur de l'oeil"
 
+#: templates/terra_opp/viewpoint_pdf.html:40
 msgid "Azimuth"
 msgstr "Azimut"
 
+#: templates/terra_opp/viewpoint_pdf.html:42
 msgid "Focal length 35mm"
 msgstr "Focale 35mm"
 
+#: templates/terra_opp/viewpoint_pdf.html:44
 msgid "Lens' focal length"
 msgstr "Focale objectif"
 
+#: templates/terra_opp/viewpoint_pdf.html:60
 msgid "Reference photo"
 msgstr "Photo de référence"
 
+#: templates/terra_opp/viewpoint_pdf.html:66
 msgid "Last photography"
 msgstr "Dernière photographie"
