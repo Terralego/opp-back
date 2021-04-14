@@ -14,7 +14,8 @@
   <img src="{% static 'banner.png' %}" />
 </div>
 
-<h1>{% trans "Rephotography sheet" %}</h1>
+<h1>{{ viewpoint.label }} (#{{ viewpoint.id }})</h1>
+<h2>{% trans "Rephotography sheet" %}</h2>
 
 {% with lon=viewpoint.point.geom.0|unlocalize lat=viewpoint.point.geom.1|unlocalize first_pic=viewpoint.pictures.earliest %}
   {% spaceless %}
