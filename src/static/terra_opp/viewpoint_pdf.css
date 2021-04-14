@@ -1,5 +1,5 @@
 @page {
-  margin: 30px
+  margin: 30px;
 }
 
 body {
@@ -14,9 +14,12 @@ body {
   border: solid 1px black;
 }
 
-
 h1 {
   font-size: 20px;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 label {
@@ -33,7 +36,8 @@ img {
   page-break-inside: avoid;
 }
 
-dl, .half-width {
+dl,
+.half-width {
   float: left;
   width: 50%;
 }
@@ -46,7 +50,8 @@ dl, .half-width {
   width: 30%;
 }
 
-dd, dt {
+dd,
+dt {
   display: inline-block;
   margin: 0;
   vertical-align: top;
@@ -74,7 +79,7 @@ dt:after {
 }
 
 .clearfix::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
