@@ -198,4 +198,8 @@ server {
         internal;
         root /public/private/;
     }
+
+    location ~ ^/mailcatcher/ {
+        proxy_pass http://mailcatcher:8025;
+    }
 }
