@@ -214,6 +214,13 @@ TROPP_VIEWPOINT_PROPERTIES_SET = {
     'filter': {},
 }
 
+TROPP_SEARCHABLE_PROPERTIES = {
+    "road": {
+        "json_key": "voie",
+        "type": "text",
+    },
+}
+
 TERRA_USER_STRING_FORMAT = 'project.utils.user_string_format'
 
 VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
