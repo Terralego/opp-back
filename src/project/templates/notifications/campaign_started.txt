@@ -1,0 +1,24 @@
+{% load i18n %}
+
+{% autoescape off %}
+{% blocktrans with campaign=campaign.label %}
+Dear Sir or Madam,
+
+A new re-photography campaign {{ campaign }} has been assigned to you by the {{ title }}.
+
+You can go to your personal space to consult the re-photography sheets 
+for each of the viewpoints and load your new photographs, via the following link:
+
+{{url}}
+
+Your personal login details have been sent to you by the Observatory manager.
+
+Best regards,
+
+{{ title }}
+
+-- 
+This e-mail has been generated automatically, please do not reply. 
+For any further information, please contact the Observatory manager directly.
+{% endblocktrans %}
+{% endautoescape %}

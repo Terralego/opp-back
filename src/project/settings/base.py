@@ -10,40 +10,40 @@ from terra_opp.helpers import Choices
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-PUBLIC_DIR = os.path.join(os.path.dirname(os.path.dirname(PROJECT_DIR)), 'public')
+PUBLIC_DIR = os.path.join(os.path.dirname(os.path.dirname(PROJECT_DIR)), "public")
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'secretkey-superhot-12345678')
+SECRET_KEY = os.environ.get("SECRET_KEY", "secretkey-superhot-12345678")
 
 # Installed apps
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.gis',
-    'rest_framework',
-    'rest_framework_gis',
-    'drf_yasg',
-    'versatileimagefield',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.gis",
+    "rest_framework",
+    "rest_framework_gis",
+    "drf_yasg",
+    "versatileimagefield",
     "corsheaders",
 )
 
 CUSTOM_APPS = (
-    'project',
-    'geostore',
-    'terra_settings',
-    'mapbox_baselayer',
-    'terra_accounts',
-    'datastore',
-    'terra_opp',
+    "project",
+    "geostore",
+    "terra_settings",
+    "mapbox_baselayer",
+    "terra_accounts",
+    "datastore",
+    "terra_opp",
 )
 
 INSTALLED_APPS += CUSTOM_APPS
 
 # Main settings
-AUTH_USER_MODEL = 'terra_accounts.TerraUser'
+AUTH_USER_MODEL = "terra_accounts.TerraUser"
 
 CACHES = {
     "default": {
@@ -51,50 +51,50 @@ CACHES = {
         "LOCATION": "redis://redis:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+        },
     }
 }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': os.environ.get('POSTGRES_DB'),
-        'USER': os.environ.get('POSTGRES_USER'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': os.environ.get('POSTGRES_HOST', 'db'),
-        'PORT': os.environ.get('POSTGRES_PORT', 5432),
+    "default": {
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": os.environ.get("POSTGRES_DB"),
+        "USER": os.environ.get("POSTGRES_USER"),
+        "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
+        "HOST": os.environ.get("POSTGRES_HOST", "db"),
+        "PORT": os.environ.get("POSTGRES_PORT", 5432),
     }
 }
 
 MIDDLEWARE = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
     "corsheaders.middleware.CorsMiddleware",
 )
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.i18n',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.i18n",
             ],
         },
     },
 ]
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = "project.urls"
 
 LOGGING = DEFAULT_LOGGING
 
@@ -104,72 +104,68 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 # DRF-related
 REST_FRAMEWORK = {
-    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
-    'DEFAULT_PAGINATION_CLASS': 'terra_settings.pagination.PagePagination',
-    'PAGE_SIZE': 100,
-
-    'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser'
+    "TEST_REQUEST_DEFAULT_FORMAT": "json",
+    "DEFAULT_PAGINATION_CLASS": "terra_settings.pagination.PagePagination",
+    "PAGE_SIZE": 100,
+    "DEFAULT_PARSER_CLASSES": (
+        "rest_framework.parsers.JSONParser",
+        "rest_framework.parsers.FormParser",
+        "rest_framework.parsers.MultiPartParser",
     ),
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
+    "DEFAULT_RENDERER_CLASSES": (
+        "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
     ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_jwt.authentication.JSONWebTokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
     ),
 }
 
 JWT_AUTH = {
-    'JWT_PAYLOAD_HANDLER': 'terra_accounts.jwt_payload.terra_payload_handler',
-    'JWT_EXPIRATION_DELTA': timedelta(hours=1),
-    'JWT_ALLOW_REFRESH': True,
+    "JWT_PAYLOAD_HANDLER": "terra_accounts.jwt_payload.terra_payload_handler",
+    "JWT_EXPIRATION_DELTA": timedelta(hours=1),
+    "JWT_ALLOW_REFRESH": True,
 }
 
 SERIALIZATION_MODULES = {
-    'geojson': 'geostore.serializers.geojson',
+    "geojson": "geostore.serializers.geojson",
 }
 
 # Internationalization
-LOCALE_PATHS = (
-    os.path.join(PROJECT_DIR, 'locales'),
-)
-LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', 'en-us')
-TIME_ZONE = os.getenv('TZ', 'UTC')
+LOCALE_PATHS = (os.path.join(PROJECT_DIR, "locales"),)
+LANGUAGE_CODE = os.getenv("LANGUAGE_CODE", "en-us")
+TIME_ZONE = os.getenv("TZ", "UTC")
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static')
-STATIC_URL = '/static_dj/'
-MEDIA_ROOT = os.path.join(PUBLIC_DIR, 'media')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = os.path.join(PUBLIC_DIR, "static")
+STATIC_URL = "/static_dj/"
+MEDIA_ROOT = os.path.join(PUBLIC_DIR, "media")
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Terralego settings
 TROPP_STATES = Choices(
-    ('DRAFT', 100, 'Draft'),
-    ('SUBMITTED', 200, 'Submitted'),
-    ('ACCEPTED', 300, 'Accepted'),
-    ('REFUSED', -1, 'Refused'),
-    ('CANCELLED', -100, 'Cancelled'),
-    ('MISSING', 0, 'Missing'),
+    ("DRAFT", 100, "Draft"),
+    ("SUBMITTED", 200, "Submitted"),
+    ("ACCEPTED", 300, "Accepted"),
+    ("REFUSED", -1, "Refused"),
+    ("CANCELLED", -100, "Cancelled"),
+    ("MISSING", 0, "Missing"),
 )
-TROPP_STATES.add_subset('MANUAL', (
-    'DRAFT',
-    'SUBMITTED',
-    'ACCEPTED',
-    'REFUSED',
-    'CANCELLED',
-))
+TROPP_STATES.add_subset(
+    "MANUAL",
+    (
+        "DRAFT",
+        "SUBMITTED",
+        "ACCEPTED",
+        "REFUSED",
+        "CANCELLED",
+    ),
+)
 
 IGN = {
     "version": 8,
@@ -180,19 +176,23 @@ IGN = {
                 "https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
             ],
             "minzoom": 0,
-            "maxzoom": 22
+            "maxzoom": 22,
         }
     },
     "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
     "glyphs": "mapbox://fonts/makinacorpus/{fontstack}/{range}.pbf",
     "layers": [
-        {"id": "ign-orthophoto-background", "type": "raster", "source": "ign-orthophoto"}
-    ]
+        {
+            "id": "ign-orthophoto-background",
+            "type": "raster",
+            "source": "ign-orthophoto",
+        }
+    ],
 }
 
 TERRA_APPLIANCE_SETTINGS = {
     "map": {
-        "accessToken": os.environ.get('MAPBOX_GL_ACCESS_TOKEN'),
+        "accessToken": os.environ.get("MAPBOX_GL_ACCESS_TOKEN"),
         "center": [0, 0],
         "zoom": 4,
         "maxBounds": [[-180, -90], [180, 90]],
@@ -201,17 +201,17 @@ TERRA_APPLIANCE_SETTINGS = {
             {"label": "Orthophoto IGN", "url": IGN},
         ],
     },
-    'enabled_modules': [],
+    "enabled_modules": [],
 }
 
 TROPP_VIEWPOINT_PROPERTIES_SET = {
-    'pdf': {
-        ('site', 'Site'),
-        ('voie', 'Voie'),
-        ('commune', 'Commune'),
+    "pdf": {
+        ("site", "Site"),
+        ("voie", "Voie"),
+        ("commune", "Commune"),
     },
-    'form': {},
-    'filter': {},
+    "form": {},
+    "filter": {},
 }
 
 TROPP_SEARCHABLE_PROPERTIES = {
@@ -221,25 +221,31 @@ TROPP_SEARCHABLE_PROPERTIES = {
     },
 }
 
-TERRA_USER_STRING_FORMAT = 'project.utils.user_string_format'
+TERRA_USER_STRING_FORMAT = "project.utils.user_string_format"
 
 VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
-    'terra_opp': [
-        ('original', 'url'),
-        ('full', 'thumbnail__1500x1125'),
-        ('list', 'thumbnail__300x225'),
-        ('thumbnail', 'thumbnail__180x120'),
-        ('thumbnail_vertical', 'thumbnail__120x180'),
+    "terra_opp": [
+        ("original", "url"),
+        ("full", "thumbnail__1500x1125"),
+        ("list", "thumbnail__300x225"),
+        ("thumbnail", "thumbnail__180x120"),
+        ("thumbnail_vertical", "thumbnail__120x180"),
     ]
 }
 
 MIN_TILE_ZOOM = 5
 MAX_TILE_ZOOM = 23
 
-TILE_FLAVOR = 'smart'
+TILE_FLAVOR = "smart"
 
 # Mail
-EMAIL_HOST = 'mailcatcher'
+EMAIL_HOST = "mailcatcher"
 EMAIL_PORT = 1025
+DEFAULT_FROM_EMAIL = "no-reply@example.fake"
+
+FRONT_ADMIN_URL = ""
+
+TROPP_OBSERVATORY_TITLE = "Terra Landscape Observatory"
+TROPP_OBSERVATORY_SHORT_TITLE = "OPP"
 
 SWAGGER_ENABLED = False
