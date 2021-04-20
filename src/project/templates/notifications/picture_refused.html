@@ -1,0 +1,21 @@
+{% load i18n %}
+
+{% blocktrans with campaign=campaign.label viewpoint=viewpoint.label %}
+<p>Dear Sir or Madam,</p>
+
+<p>As part of the re-photography campaign <em>{{campaign}}</em>, the photograph you submitted for the viewpoint <em>{{viewpoint}}</em>
+was rejected by the manager, with the following message: {{reason}}.</p>
+
+<p>You can go to your personal space to submit a new photograph, via <a href="{{url}}">this link</a>.</p>
+
+<p>Your personal login details have been sent to you by the Observatory manager.</p>
+
+<p>Best regards,</p>
+
+<p>{{ title }}</p>
+
+<p>-- <br />
+  This e-mail has been generated automatically, please do not reply.
+  For any further information, please contact the Observatory manager directly.
+</p>
+{% endblocktrans %}

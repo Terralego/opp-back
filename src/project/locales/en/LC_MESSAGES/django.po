@@ -16,22 +16,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: project/receivers.py:43
 #, python-brace-format
 msgid "A new re-photography campaign has been assigned to you: {campaign}"
-msgstr "Une nouvelle campagne vous a été assignée : {campaign}"
+msgstr ""
 
 #: project/receivers.py:75
 #, python-brace-format
 msgid "New photograph submitted for validation - {campaign}: {viewpoint}"
-msgstr "Une nouvelle photographie à valider - {campaign} : {viewpoint}"
+msgstr ""
 
 #: project/receivers.py:107
 #, python-brace-format
 msgid "Photograph rejected - {campaign}: {viewpoint}"
-msgstr "Photographie refusée - {campaign} : {viewpoint}"
+msgstr ""
 
 #: project/templates/notifications/campaign_started.html:3
 #, python-format
@@ -59,29 +59,6 @@ msgid ""
 "directly.\n"
 "</p>\n"
 msgstr ""
-"\n"
-"<p>Bonjour,</p>\n"
-"\n"
-"<p>Une nouvelle campagne de re-photographie <em>%(campaign)s</em> vous a été "
-"assignée par l'%(title)s.</p>\n"
-"\n"
-"<p>Vous pouvez vous rendre sur votre espace personnel pour consulter les "
-"fiches de rephotographie\n"
-"de chacun des points de vue et télécharger vos nouvelles prises de vue, via "
-"<a href=\"%(url)s\">ce lien</a>.</p>\n"
-"\n"
-"<p>Vos identifiants personnels de connexion vous ont été communiqués par le "
-"gestionnaire de l'Observatoire.</p>\n"
-"\n"
-"<p>Cordialement,</p>\n"
-"\n"
-"<p>%(title)s</p>\n"
-"\n"
-"<p>-- <br />\n"
-"Cet e-mail a été généré automatiquement, merci de ne pas répondre.\n"
-"Pour tout renseignement complémentaire, veuillez contacter directement le "
-"gestionnaire de l'Observatoire.\n"
-"</p>\n"
 
 #: project/templates/notifications/campaign_started.txt:4
 #, python-format
@@ -110,30 +87,6 @@ msgid ""
 "For any further information, please contact the Observatory manager "
 "directly.\n"
 msgstr ""
-"\n"
-"Bonjour,\n"
-"\n"
-"Une nouvelle campagne de re-photographie %(campaign)s vous a été assignée "
-"par l'%(title)s.\n"
-"\n"
-"Vous pouvez vous rendre sur votre espace personnel pour consulter les fiches "
-"de rephotographie \n"
-"de chacun des points de vue et télécharger vos nouvelles prises de vue, via "
-"le lien suivant :\n"
-"\n"
-"%(url)s\n"
-"\n"
-"Vos identifiants personnels de connexion vous ont été communiqués par le "
-"gestionnaire de l'Observatoire.\n"
-"\n"
-"Cordialement,\n"
-"\n"
-"%(title)s\n"
-"\n"
-"-- \n"
-"Cet e-mail a été généré automatiquement, merci de ne pas répondre. \n"
-"Pour tout renseignement complémentaire, veuillez contacter directement le "
-"gestionnaire de l'Observatoire.\n"
 
 #: project/templates/notifications/picture_refused.html:3
 #, python-format
@@ -161,27 +114,6 @@ msgid ""
 "directly.\n"
 "</p>\n"
 msgstr ""
-"\n"
-"<p>Bonjour,</p>\n"
-"\n"
-"<p>Dans le cadre de la campagne de re-photographie <em>%(campaign)s</em>, la "
-"photographie que vous avez soumise pour le point de vue <em>%(viewpoint)s</"
-"em> \n"
-"a été refusée par le gestionnaire, avec le message suivant : %(reason)s.</"
-"p>\n"
-"\n"
-"<p>Vous pouvez vous rendre sur votre espace personnel pour soumettre une "
-"nouvelle photographie, via <a href=\"%(url)s\">ce lien</a>.</p>\n"
-"\n"
-"<p>Cordialement,</p>\n"
-"\n"
-"<p>%(title)s</p>\n"
-"\n"
-"<p>-- <br />\n"
-"Cet e-mail a été généré automatiquement, merci de ne pas répondre.\n"
-"Pour tout renseignement complémentaire, veuillez contacter directement le "
-"gestionnaire de l'Observatoire.\n"
-"</p>\n"
 
 #: project/templates/notifications/picture_refused.txt:4
 #, python-format
@@ -210,26 +142,6 @@ msgid ""
 "For any further information, please contact the Observatory manager "
 "directly.\n"
 msgstr ""
-"\n"
-"Bonjour,\n"
-"\n"
-"Dans le cadre de la campagne de re-photographie %(campaign)s, la "
-"photographie que vous avez soumise pour le point de vue %(viewpoint)s\n"
-"a été refusée par le gestionnaire, avec le message suivant : %(reason)s.\n"
-"\n"
-"Vous pouvez vous rendre sur votre espace personnel pour soumettre une "
-"nouvelle photographie, via le lien suivant :\n"
-"\n"
-"%(url)s\n"
-"\n"
-"Cordialement,\n"
-"\n"
-"%(title)s\n"
-"\n"
-"-- \n"
-"Cet e-mail a été généré automatiquement, merci de ne pas répondre. \n"
-"Pour tout renseignement complémentaire, veuillez contacter directement le "
-"gestionnaire de l'Observatoire.\n"
 
 #: project/templates/notifications/picture_submitted.html:3
 #, python-format
@@ -253,26 +165,6 @@ msgid ""
 "directly.\n"
 "</p>\n"
 msgstr ""
-"\n"
-"<p>Bonjour,</p>\n"
-"\n"
-"<p>Une nouvelle photographie pour le point de vue <em>%(viewpoint)s</em> a "
-"été soumise à validation dans le cadre de la campagne <em>%(campaign)s</em>."
-"</p>\n"
-"\n"
-"<p>Vous pouvez vous rendre dans l'espace de gestion de l'Observatoire pour "
-"procéder à la validation des photographies, via <a href=\"%(url)s\">ce lien</"
-"a>.</p>\n"
-"\n"
-"<p>Cordialement,</p>\n"
-"\n"
-"<p>%(title)s</p>\n"
-"\n"
-"<p>-- <br />\n"
-"Cet e-mail a été généré automatiquement, merci de ne pas répondre.\n"
-"Pour tout renseignement complémentaire, veuillez contacter directement le "
-"gestionnaire de l'Observatoire.\n"
-"</p>\n"
 
 #: project/templates/notifications/picture_submitted.txt:4
 #, python-format
@@ -297,37 +189,18 @@ msgid ""
 "For any further information, please contact the Observatory manager "
 "directly.\n"
 msgstr ""
-"\n"
-"Bonjour,\n"
-"\n"
-"Une nouvelle photographie pour le point de vue %(viewpoint)s a été soumise à "
-"validation dans le cadre de la campagne %(campaign)s.\n"
-"\n"
-"Vous pouvez vous rendre dans l'espace de gestion de l'Observatoire pour "
-"procéder à la validation des photographies, via le lien suivant :\n"
-"\n"
-"%(url)s\n"
-"\n"
-"Cordialement,\n"
-"\n"
-"%(title)s\n"
-"\n"
-"-- \n"
-"Cet e-mail a été généré automatiquement, merci de ne pas répondre. \n"
-"Pour tout renseignement complémentaire, veuillez contacter directement le "
-"gestionnaire de l'Observatoire.\n"
 
 #: templates/terra_opp/viewpoint_pdf.html:18
 msgid "Rephotography sheet"
-msgstr "Fiche de rephotographie"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:23
 msgid "Municipality"
-msgstr "Commune"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:25
 msgid "Address"
-msgstr "Adresse"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:27
 msgid "Site"
@@ -335,7 +208,7 @@ msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:29
 msgid "Comments"
-msgstr "Observations"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:33
 msgid "Latitude"
@@ -351,24 +224,24 @@ msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:39
 msgid "Eye height"
-msgstr "Hauteur de l'oeil"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:41
 msgid "Azimuth"
-msgstr "Azimut"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:43
 msgid "Focal length 35mm"
-msgstr "Focale 35mm"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:45
 msgid "Lens' focal length"
-msgstr "Focale objectif"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:61
 msgid "Reference photo"
-msgstr "Photo de référence"
+msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:67
 msgid "Last photography"
-msgstr "Dernière photographie"
+msgstr ""

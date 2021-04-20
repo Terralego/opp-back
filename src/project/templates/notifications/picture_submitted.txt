@@ -1,0 +1,21 @@
+{% load i18n %}
+
+{% autoescape off %}
+{% blocktrans with campaign=campaign.label viewpoint=viewpoint.label %}
+Dear Sir or Madam,
+
+New photograph for viewpoint {{viewpoint}} has been submitted for validation as part of the <em>{{ campaign }}</em> campaign.
+
+You can go to the Observatory's management space to validate the photograph, via the following link:
+
+{{url}}
+
+Best regards,
+
+{{ title }}
+
+-- 
+This e-mail has been generated automatically, please do not reply. 
+For any further information, please contact the Observatory manager directly.
+{% endblocktrans %}
+{% endautoescape %}
