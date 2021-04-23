@@ -82,7 +82,7 @@ django-mapbox-baselayer==0.0.8
     # via django-terra-settings
 django-redis==4.10.0
     # via -r requirements.in
-django-terra-accounts==1.0.4
+django-terra-accounts==1.0.5
     # via terra-opp
 django-terra-settings==1.0.3
     # via
@@ -218,7 +218,7 @@ six==1.15.0
     #   munch
 sqlparse==0.4.1
     # via django
-terra-opp==0.6.8
+terra-opp==0.6.9
     # via -r requirements.in
 tinycss2==1.1.0
     # via
