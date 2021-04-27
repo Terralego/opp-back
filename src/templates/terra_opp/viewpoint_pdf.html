@@ -48,9 +48,9 @@
   {% endspaceless %}
 
   {% for doc in viewpoint.related.all %}
-    {% if doc.key == 'croquis' or doc.key == 'emplacement' %}
+    {% if doc.properties.type == 'croquis' or doc.properties.type == 'emplacement' %}
       <div class="half-width">
-        <label>{{ doc.key|capfirst }}</label>
+        <label>{{ doc.properties.type|capfirst }}</label>
         <img src="{{ doc.document|as_versatile:'thumbnail__400x800' }}" />
       </div>
     {% endif %}
