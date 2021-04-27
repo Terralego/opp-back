@@ -25,6 +25,7 @@ INSTALLED_APPS = (
     "django.contrib.gis",
     "rest_framework",
     "rest_framework_gis",
+    "django_filters",
     "drf_yasg",
     "versatileimagefield",
     "corsheaders",
@@ -202,6 +203,7 @@ TERRA_APPLIANCE_SETTINGS = {
         ],
     },
     "enabled_modules": [],
+    "disabled_modules": [],
 }
 
 TROPP_VIEWPOINT_PROPERTIES_SET = {
@@ -220,6 +222,16 @@ TROPP_SEARCHABLE_PROPERTIES = {
         "type": "text",
     },
 }
+
+TROPP_THEME_CATEGORIES = [
+    {
+        "id": "keywords",
+        "name": "Keywords",
+        "color": "#ef476f",
+    },
+    {"id": "typologies", "name": "Typologies", "color": "#06d6a0"},
+    {"id": "entities", "name": "Landscape entities", "color": "#118ab2"},
+]
 
 TERRA_USER_STRING_FORMAT = "project.utils.user_string_format"
 
