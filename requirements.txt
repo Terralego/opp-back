@@ -218,7 +218,7 @@ six==1.15.0
     #   munch
 sqlparse==0.4.1
     # via django
-terra-opp==0.7.0
+terra-opp==0.7.1
     # via -r requirements.in
 tinycss2==1.1.0
     # via
