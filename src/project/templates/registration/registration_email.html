@@ -1,0 +1,15 @@
+{% load i18n %}{% autoescape off %}
+{% load settings_tags %}
+
+<p>{% blocktrans %}You're receiving this email because you requested a password reset for your user account.{% endblocktrans %}</p>
+
+<p>{% trans "Please go to the following page and choose a new password:" %}
+{% block reset_link %}
+  <a href="{% front_url %}/create-account/{{uid}}/{{token}}"/>{% front_url %}/create-account/{{uid}}/{{token}}</a>
+{% endblock %}
+</p>
+<p>{% trans 'Your username, in case you’ve forgotten:' %} {{ user.get_username }}</p>
+
+<p>{% trans "Thanks for using our site!" %}</p>
+
+{% endautoescape %}
