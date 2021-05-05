@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.template.loader import render_to_string
 
 from terra_opp.models import Campaign, Picture
-from terra_opp.signals import state_change
+from terra_opp.signals import state_change, campaign_updated
 
 campaign_started_templates = {
     "text": "notifications/campaign_started.txt",
@@ -21,6 +21,11 @@ picture_submitted_templates = {
 picture_refused_templates = {
     "text": "notifications/picture_refused.txt",
     "html": "notifications/picture_refused.html",
+}
+
+campaign_updated_templates = {
+    "text": "notifications/campaign_updated.txt",
+    "html": "notifications/campaign_updated.html",
 }
 
 
@@ -118,3 +123,31 @@ def send_picture_refused(
             html_message=html,
             fail_silently=False,
         )
+
+@receiver(campaign_updated, sender=Campaign)
+def send_campaign_updated_notification(sender, instance=None, *args, **kwargs):
+    print('sender', sender)
+    print('Instance', instance)
+    context = {
+        "url": f"{settings.FRONT_ADMIN_URL}/campaign/{instance.id}",
+        "title": settings.TROPP_OBSERVATORY_TITLE,
+        "campaign": instance,
+    }
+
+    txt = render_to_string(campaign_updated_templates["text"], context)
+    html = render_to_string(campaign_updated_templates["html"], context)
+
+    raw_subject = _(
+        "New photograph submitted for validation - {campaign}"
+    ).format(campaign=instance.label)
+
+    subject = f"[{settings.TROPP_OBSERVATORY_SHORT_TITLE}] {raw_subject}"
+
+    send_mail(
+        subject,
+        txt,
+        settings.DEFAULT_FROM_EMAIL,
+        [instance.owner.email],
+        html_message=html,
+        fail_silently=False,
+    )
