@@ -23,6 +23,11 @@ picture_refused_templates = {
     "html": "notifications/picture_refused.html",
 }
 
+campaign_updated_templates = {
+    "text": "notifications/campaign_updated.txt",
+    "html": "notifications/campaign_updated.html",
+}
+
 
 @receiver(state_change, sender=Campaign)
 def send_campaign_notifications(

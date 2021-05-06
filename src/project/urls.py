@@ -21,11 +21,14 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
+from . import views
+
 urlpatterns = [
     path('api/', include('geostore.urls')),
     path('api/', include('terra_accounts.urls')),
     path('api/', include('terra_settings.urls')),
     path('api/', include('terra_opp.urls')),
+    path('api/notify-campaign-admin/<pk>/', views.notify_admin, name='notify-campaign-admin'),
     path('dj-admin/', admin.site.urls),
 ]
 

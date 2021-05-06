@@ -1,0 +1,18 @@
+{% load i18n %}
+
+{% blocktrans with campaign=campaign.label %}
+<p>Dear Sir or Madam,</p>
+
+<p>New photographs has been submitted for validation as part of the <em>{{ campaign }}</em> campaign.</p>
+
+<p>You can go to the Observatory's management space to validate the photograph, via <a href="{{url}}">this link</a>.</p>
+
+<p>Best regards,</p>
+
+<p>{{ title }}</p>
+
+<p>-- <br />
+  This e-mail has been generated automatically, please do not reply.
+  For any further information, please contact the Observatory manager directly.
+</p>
+{% endblocktrans %}
