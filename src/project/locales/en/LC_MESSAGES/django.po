@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-29 14:02+0000\n"
+"POT-Creation-Date: 2021-05-10 07:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,17 +34,17 @@ msgstr ""
 msgid "Can manage campaign"
 msgstr ""
 
-#: project/receivers.py:43
+#: project/receivers.py:48
 #, python-brace-format
 msgid "A new re-photography campaign has been assigned to you: {campaign}"
 msgstr ""
 
-#: project/receivers.py:75
+#: project/receivers.py:80
 #, python-brace-format
 msgid "New photograph submitted for validation - {campaign}: {viewpoint}"
 msgstr ""
 
-#: project/receivers.py:107
+#: project/receivers.py:112
 #, python-brace-format
 msgid "Photograph rejected - {campaign}: {viewpoint}"
 msgstr ""
@@ -104,6 +104,53 @@ msgid ""
 "directly.\n"
 msgstr ""
 
+#: project/templates/notifications/campaign_updated.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>Dear Sir or Madam,</p>\n"
+"\n"
+"<p>New photographs has been submitted for validation as part of the <em>"
+"%(campaign)s</em> campaign.</p>\n"
+"\n"
+"<p>You can go to the Observatory's management space to validate the "
+"photograph, via <a href=\"%(url)s\">this link</a>.</p>\n"
+"\n"
+"<p>Best regards,</p>\n"
+"\n"
+"<p>%(title)s</p>\n"
+"\n"
+"<p>-- <br />\n"
+"  This e-mail has been generated automatically, please do not reply.\n"
+"  For any further information, please contact the Observatory manager "
+"directly.\n"
+"</p>\n"
+msgstr ""
+
+#: project/templates/notifications/campaign_updated.txt:4
+#, python-format
+msgid ""
+"\n"
+"Dear Sir or Madam,\n"
+"\n"
+"New photographs has been submitted for validation as part of the <em>"
+"%(campaign)s</em> campaign.\n"
+"\n"
+"You can go to the Observatory's management space to validate the photograph, "
+"via the following link:\n"
+"\n"
+"%(url)s\n"
+"\n"
+"Best regards,\n"
+"\n"
+"%(title)s\n"
+"\n"
+"--\n"
+"This e-mail has been generated automatically, please do not reply.\n"
+"For any further information, please contact the Observatory manager "
+"directly.\n"
+msgstr ""
+
 #: project/templates/notifications/picture_refused.html:3
 #, python-format
 msgid ""
@@ -159,53 +206,6 @@ msgid ""
 "directly.\n"
 msgstr ""
 
-#: project/templates/notifications/picture_submitted.html:3
-#, python-format
-msgid ""
-"\n"
-"<p>Dear Sir or Madam,</p>\n"
-"\n"
-"<p>New photograph for viewpoint <em>%(viewpoint)s</em> has been submitted "
-"for validation as part of the <em>%(campaign)s</em> campaign.</p>\n"
-"\n"
-"<p>You can go to the Observatory's management space to validate the "
-"photograph, via <a href=\"%(url)s\">this link</a>.</p>\n"
-"\n"
-"<p>Best regards,</p>\n"
-"\n"
-"<p>%(title)s</p>\n"
-"\n"
-"<p>-- <br />\n"
-"  This e-mail has been generated automatically, please do not reply.\n"
-"  For any further information, please contact the Observatory manager "
-"directly.\n"
-"</p>\n"
-msgstr ""
-
-#: project/templates/notifications/picture_submitted.txt:4
-#, python-format
-msgid ""
-"\n"
-"Dear Sir or Madam,\n"
-"\n"
-"New photograph for viewpoint %(viewpoint)s has been submitted for validation "
-"as part of the <em>%(campaign)s</em> campaign.\n"
-"\n"
-"You can go to the Observatory's management space to validate the photograph, "
-"via the following link:\n"
-"\n"
-"%(url)s\n"
-"\n"
-"Best regards,\n"
-"\n"
-"%(title)s\n"
-"\n"
-"-- \n"
-"This e-mail has been generated automatically, please do not reply. \n"
-"For any further information, please contact the Observatory manager "
-"directly.\n"
-msgstr ""
-
 #: project/templates/registration/registration_email.html:4
 #: project/templates/registration/registration_email.txt:4
 msgid ""
@@ -219,17 +219,22 @@ msgid "Please go to the following page and choose a new password:"
 msgstr ""
 
 #: project/templates/registration/registration_email.html:11
-#: project/templates/registration/registration_email.txt:11
+#: project/templates/registration/registration_email.txt:10
 msgid "Your username, in case you’ve forgotten:"
 msgstr ""
 
 #: project/templates/registration/registration_email.html:13
-#: project/templates/registration/registration_email.txt:13
+#: project/templates/registration/registration_email.txt:12
 msgid "Thanks for using our site!"
 msgstr ""
 
 #: project/templates/registration/registration_email_subject.txt:2
 msgid "Password reset"
+msgstr ""
+
+#: project/views.py:34
+#, python-brace-format
+msgid "New photograph submitted for validation - {campaign}"
 msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:18

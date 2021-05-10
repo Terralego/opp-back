@@ -13,11 +13,6 @@ campaign_started_templates = {
     "html": "notifications/campaign_started.html",
 }
 
-picture_submitted_templates = {
-    "text": "notifications/picture_submitted.txt",
-    "html": "notifications/picture_submitted.html",
-}
-
 picture_refused_templates = {
     "text": "notifications/picture_refused.txt",
     "html": "notifications/picture_refused.html",
@@ -55,38 +50,6 @@ def send_campaign_notifications(
             txt,
             settings.DEFAULT_FROM_EMAIL,
             [instance.assignee.email],
-            html_message=html,
-            fail_silently=False,
-        )
-
-
-@receiver(state_change, sender=Picture)
-def send_picture_submitted(
-    sender, instance=None, prev_state=None, new_state=None, **kwargs
-):
-
-    if new_state == Picture.SUBMITTED:
-        context = {
-            "url": f"{settings.FRONT_ADMIN_URL}/picture/{instance.id}",
-            "title": settings.TROPP_OBSERVATORY_TITLE,
-            "campaign": instance.campaign,
-            "viewpoint": instance.viewpoint,
-        }
-
-        txt = render_to_string(picture_submitted_templates["text"], context)
-        html = render_to_string(picture_submitted_templates["html"], context)
-
-        raw_subject = _(
-            "New photograph submitted for validation - {campaign}: {viewpoint}"
-        ).format(campaign=instance.campaign.label, viewpoint=instance.viewpoint.label)
-
-        subject = f"[{settings.TROPP_OBSERVATORY_SHORT_TITLE}] {raw_subject}"
-
-        send_mail(
-            subject,
-            txt,
-            settings.DEFAULT_FROM_EMAIL,
-            [instance.campaign.owner.email],
             html_message=html,
             fail_silently=False,
         )
