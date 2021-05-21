@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-10 07:17+0000\n"
+"POT-Creation-Date: 2021-05-21 12:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,17 +34,12 @@ msgstr ""
 msgid "Can manage campaign"
 msgstr ""
 
-#: project/receivers.py:48
+#: project/receivers.py:43
 #, python-brace-format
 msgid "A new re-photography campaign has been assigned to you: {campaign}"
 msgstr ""
 
-#: project/receivers.py:80
-#, python-brace-format
-msgid "New photograph submitted for validation - {campaign}: {viewpoint}"
-msgstr ""
-
-#: project/receivers.py:112
+#: project/receivers.py:75
 #, python-brace-format
 msgid "Photograph rejected - {campaign}: {viewpoint}"
 msgstr ""
@@ -234,7 +229,7 @@ msgstr ""
 
 #: project/views.py:34
 #, python-brace-format
-msgid "New photograph submitted for validation - {campaign}"
+msgid "New photographs submitted for validation - {campaign}"
 msgstr ""
 
 #: templates/terra_opp/viewpoint_pdf.html:18

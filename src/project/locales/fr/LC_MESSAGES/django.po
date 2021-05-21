@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-10 07:17+0000\n"
+"POT-Creation-Date: 2021-05-21 12:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,17 +35,12 @@ msgstr "OPP - Proposer des photos"
 msgid "Can manage campaign"
 msgstr "OPP - Gestion des campagnes"
 
-#: project/receivers.py:48
+#: project/receivers.py:43
 #, python-brace-format
 msgid "A new re-photography campaign has been assigned to you: {campaign}"
 msgstr "Une nouvelle campagne vous a été assignée : {campaign}"
 
-#: project/receivers.py:80
-#, python-brace-format
-msgid "New photograph submitted for validation - {campaign}: {viewpoint}"
-msgstr "Une nouvelle photographie à valider - {campaign} : {viewpoint}"
-
-#: project/receivers.py:112
+#: project/receivers.py:75
 #, python-brace-format
 msgid "Photograph rejected - {campaign}: {viewpoint}"
 msgstr "Photographie refusée - {campaign} : {viewpoint}"
@@ -153,6 +148,7 @@ msgstr ""
 "gestionnaire de l'Observatoire.\n"
 
 #: project/templates/notifications/campaign_updated.html:3
+#, python-format
 msgid ""
 "\n"
 "<p>Dear Sir or Madam,</p>\n"
@@ -176,9 +172,8 @@ msgstr ""
 "\n"
 "<p>Bonjour,</p>\n"
 "\n"
-"<p>De nouvelles photographies ont "
-"été soumise à validation dans le cadre de la campagne <em>%(campaign)s</em>."
-"</p>\n"
+"<p>De nouvelles photographies ont été soumises à validation dans le cadre de "
+"la campagne <em>%(campaign)s</em>.</p>\n"
 "\n"
 "<p>Vous pouvez vous rendre dans l'espace de gestion de l'Observatoire pour "
 "procéder à la validation des photographies, via <a href=\"%(url)s\">ce lien</"
@@ -195,6 +190,7 @@ msgstr ""
 "</p>\n"
 
 #: project/templates/notifications/campaign_updated.txt:4
+#, python-format
 msgid ""
 "\n"
 "Dear Sir or Madam,\n"
@@ -219,8 +215,8 @@ msgstr ""
 "\n"
 "Bonjour,\n"
 "\n"
-"De nouvelles photographies ont été soumise à "
-"validation dans le cadre de la campagne %(campaign)s.\n"
+"De nouvelles photographies ont été soumises à validation dans le cadre de la "
+"campagne %(campaign)s.\n"
 "\n"
 "Vous pouvez vous rendre dans l'espace de gestion de l'Observatoire pour "
 "procéder à la validation des photographies, via le lien suivant :\n"
@@ -360,10 +356,8 @@ msgid "Password reset"
 msgstr "Changement de mot de passe"
 
 #: project/views.py:34
-#, fuzzy, python-brace-format
-#| msgid "New photograph submitted for validation - {campaign}: {viewpoint}"
-msgid "New photograph submitted for validation - {campaign}"
-msgstr "Une nouvelle photographie à valider - {campaign} : {viewpoint}"
+msgid "New photographs submitted for validation - {campaign}"
+msgstr "De nouvelles photographies à valider - {campaign}"
 
 #: templates/terra_opp/viewpoint_pdf.html:18
 msgid "Rephotography sheet"
