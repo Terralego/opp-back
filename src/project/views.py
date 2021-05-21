@@ -31,7 +31,7 @@ def notify_admin(request, pk=None, *args, **kwargs):
     html = render_to_string(campaign_updated_templates["html"], context)
 
     raw_subject = _(
-        "New photograph submitted for validation - {campaign}"
+        "New photographs submitted for validation - {campaign}"
     ).format(campaign=campaign.label)
 
     subject = f"[{settings.TROPP_OBSERVATORY_SHORT_TITLE}] {raw_subject}"
