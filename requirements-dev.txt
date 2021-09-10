@@ -10,14 +10,14 @@ coverage==5.4
     # via -r requirements-dev.in
 distlib==0.3.1
     # via virtualenv
-django-debug-toolbar==1.9.1
-    # via -r requirements-dev.in
-django-extensions==3.1.1
-    # via -r requirements-dev.in
 django==2.2.18
     # via
     #   -r requirements-dev.in
     #   django-debug-toolbar
+django-debug-toolbar==1.9.1
+    # via -r requirements-dev.in
+django-extensions==3.1.1
+    # via -r requirements-dev.in
 eradicate==2.0.0
     # via -r requirements-dev.in
 filelock==3.0.12
@@ -54,7 +54,7 @@ six==1.15.0
     #   virtualenv
 snowballstemmer==2.1.0
     # via pydocstyle
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   django
     #   django-debug-toolbar
